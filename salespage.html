@@ -17,6 +17,38 @@
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow text-center py-2 flex items-center justify-center gap-4 px-4">
   <p class="text-pink-600 font-semibold text-sm md:text-base">Enjoy Enrolment Discounts of Up to <strong>$800</strong> at Little Unicorn Preschool – Limited Slots Available </p>
   <a href="#plan" class="bg-pink-500 text-white text-sm font-medium px-4 py-2 rounded-full shadow hover:bg-pink-600 transition whitespace-nowrap">I'm Interested</a>
+<div id="countdown-wrapper" class="bg-pink-100 text-pink-800 text-center py-2">
+  <p class="text-sm md:text-base font-semibold">
+    Offer ends in <span id="timer" class="font-bold">24:00:00</span> – Hurry!
+  </p>
+</div>
+
+<script>
+  function startCountdown(duration, display) {
+    let timer = duration, hours, minutes, seconds;
+    setInterval(function () {
+      hours = String(Math.floor(timer / 3600)).padStart(2, '0');
+      minutes = String(Math.floor((timer % 3600) / 60)).padStart(2, '0');
+      seconds = String(timer % 60).padStart(2, '0');
+
+      display.textContent = `${hours}:${minutes}:${seconds}`;
+
+      if (--timer < 0) {
+        timer = duration; // Reset after 24 hours
+      }
+    }, 1000);
+  }
+
+  window.onload = function () {
+    const twentyFourHours = 24 * 60 * 60, // 24 jam dalam detik
+          display = document.getElementById('timer');
+    startCountdown(twentyFourHours, display);
+  };
+</script>
+
+
+
+  
 </header>
 
 
