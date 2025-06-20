@@ -21,6 +21,25 @@
   animation: blink 1s infinite;
   transition: all 0.3s ease;
 }
+    /* Blink effect */
+@keyframes blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+/* Bounce effect */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.bounce {
+  animation: bounce 1.5s infinite;
+}
   </style>
 </head>
 <body class="bg-blue-50 text-gray-800">
@@ -48,11 +67,11 @@
 
     <!-- Countdown dan Tombol sejajar -->
     <div class="flex flex-row items-center justify-center gap-3">
-      <div id="countdown-wrapper" class="inline-block bg-pink-100 text-pink-800 text-sm md:text-base font-semibold px-4 py-1 rounded-full">
+      <div id="countdown-wrapper" class="inline-block bg-pink-100 text-pink-800 text-sm md:text-base font-semibold px-4 py-1 rounded-full blink bounce">
         Offer ends in <span id="timer" class="font-bold">24:00:00</span> – Hurry!
       </div>
-      <a href="#plan" class="bg-pink-500 text-white text-sm font-medium px-4 py-2 rounded-full shadow hover:bg-pink-600 transition whitespace-nowrap">
-        I'm Interested
+      <a href="#plan" class="bg-pink-500 text-white text-sm font-medium px-4 py-2 rounded-full shadow hover:bg-pink-600 transition whitespace-nowrap blink bounce">
+        I'm Interested!
       </a>
     </div>
 
