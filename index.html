@@ -17,19 +17,18 @@
 <body class="bg-blue-50 text-gray-800">
 
 
-
- <!-- Header utama: Logo dan nama -->
+<!-- Header Utama: Logo + Nama (di tengah) -->
 <header id="main-header" class="bg-white/90 backdrop-blur shadow-sm">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+  <div class="container mx-auto px-4 py-4 flex justify-center items-center text-center">
     <div class="flex items-center gap-3">
-      <!-- Ganti src/logo.svg sesuai kebutuhan -->
+      <!-- Ganti 'logo.svg' dengan path logomu -->
       <img src="logo.svg" alt="Logo" class="h-8 w-auto">
       <h1 class="text-2xl font-bold text-blue-800">Little Unicorn Preschool</h1>
     </div>
   </div>
 </header>
 
-<!-- Header promo sticky -->
+<!-- Header Promo: Sticky Countdown -->
 <header id="promo-header" class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow px-4 py-3">
   <div class="flex flex-col items-center gap-2 text-center">
 
@@ -51,7 +50,7 @@
   </div>
 </header>
 
-<!-- Script countdown -->
+<!-- Countdown Script -->
 <script>
   function startCountdown(duration, display) {
     let timer = duration, hours, minutes, seconds;
