@@ -40,6 +40,15 @@
 .bounce {
   animation: bounce 1.5s infinite;
 }
+    @keyframes bgFlash {
+  0%   { background-color: #bfdbfe; }  /* light blue */
+  50%  { background-color: #fef9c3; }  /* light yellow */
+  100% { background-color: #bfdbfe; }
+}
+
+.bg-blink {
+  animation: bgFlash 2s infinite;
+}
   </style>
 </head>
 <body class="bg-blue-50 text-gray-800">
@@ -50,14 +59,14 @@
   <div class="container mx-auto px-4 py-4 flex justify-center items-center text-center">
     <div class="flex items-center gap-3">
       <!-- LOGO  -->
-      <img src="https://littleunicornpr.github.io/landingpage/logo.png" alt="Logo" class="h-14 w-auto">
+      <img src="https://littleunicornpr.github.io/landingpage/logo.png" alt="Logo" class="h-18 w-auto">
       <h1 class="text-2xl font-bold text-blue-800"></h1>
     </div>
   </div>
 </header>
 
 <!-- Header Promo: Sticky Countdown -->
-<header id="promo-header" class="sticky top-0 z-50 bg-blue-100  backdrop-blur-md shadow px-4 py-3">
+<header id="promo-header" class="sticky top-0 z-50 bg-blink backdrop-blur-md shadow px-4 py-3">
   <div class="flex flex-col items-center gap-2 text-center">
 
     <!-- Deskripsi -->
