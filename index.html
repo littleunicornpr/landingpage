@@ -40,14 +40,19 @@
 .bounce {
   animation: bounce 1.5s infinite;
 }
-    @keyframes bgFlash {
-  0%   { background-color: #bfdbfe; }  /* light blue */
-  50%  { background-color: #fef9c3; }  /* light yellow */
-  100% { background-color: #bfdbfe; }
+    @keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
-.bg-blink {
-  animation: bgFlash 2s infinite;
+.bg-gradient-animated {
+  background: linear-gradient(270deg, #bfdbfe, #fef9c3); /* biru muda ke kuning muda */
+  background-size: 200% 200%;
+  animation: gradientMove 5s linear infinite;
 }
   </style>
 </head>
@@ -66,11 +71,11 @@
 </header>
 
 <!-- Header Promo: Sticky Countdown -->
-<header id="promo-header" class="sticky top-0 z-50 bg-blink backdrop-blur-md shadow px-4 py-3">
+<header id="promo-header" class="sticky top-0 z-50 bg-gradient-animated backdrop-blur-md shadow px-4 py-3">
   <div class="flex flex-col items-center gap-2 text-center">
 
     <!-- Deskripsi -->
-    <p class="text-pink-600 font-semibold text-sm md:text-base blink-text">
+    <p class="text-pink-600 font-semibold text-sm md:text-base blink bounce">
       Enjoy Enrolment Discounts of Up to <strong>$800</strong> at Little Unicorn Preschool – Limited Slots Available
     </p>
 
