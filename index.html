@@ -12,6 +12,15 @@
     body {
       font-family: 'Nunito', sans-serif;
     }
+    @keyframes blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.blink-text {
+  animation: blink 1s infinite;
+  transition: all 0.3s ease;
+}
   </style>
 </head>
 <body class="bg-blue-50 text-gray-800">
@@ -33,7 +42,7 @@
   <div class="flex flex-col items-center gap-2 text-center">
 
     <!-- Deskripsi -->
-    <p class="text-pink-600 font-semibold text-sm md:text-base">
+    <p class="text-pink-600 font-semibold text-sm md:text-base blink-text">
       Enjoy Enrolment Discounts of Up to <strong>$800</strong> at Little Unicorn Preschool – Limited Slots Available
     </p>
 
