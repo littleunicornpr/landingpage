@@ -13,24 +13,23 @@
   </style>
 </head>
 <body class="bg-yellow-50 text-gray-800">
-    
-<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow text-center py-2 flex items-center justify-center gap-4 px-4">
-  <p class="text-pink-600 font-semibold text-sm md:text-base">
-    Enjoy Enrolment Discounts of Up to <strong>$800</strong> at Little Unicorn Preschool – Limited Slots Available
-  </p>
-  <a href="#plan" class="bg-pink-500 text-white text-sm font-medium px-4 py-2 rounded-full shadow hover:bg-pink-600 transition whitespace-nowrap">
-    I'm Interested
-  </a>
+
+  
+ <!--TOP HEADER -->   
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow text-center py-3 px-4">
+  <div class="flex flex-col items-center gap-2">
+    <p class="text-pink-600 font-semibold text-sm md:text-base">
+      Enjoy Enrolment Discounts of Up to <strong>$800</strong> at Little Unicorn Preschool – Limited Slots Available
+    </p>
+    <div id="countdown-wrapper" class="bg-pink-100 text-pink-800 text-sm md:text-base font-semibold px-4 py-1 rounded-full">
+      Offer ends in <span id="timer" class="font-bold">24:00:00</span> – Hurry!
+    </div>
+    <a href="#plan" class="bg-pink-500 text-white text-sm font-medium px-4 py-2 rounded-full shadow hover:bg-pink-600 transition whitespace-nowrap mt-2">
+      I'm Interested
+    </a>
+  </div>
 </header>
 
-<!-- Countdown Section (di luar <header>) -->
-<div id="countdown-wrapper" class="bg-pink-100 text-pink-800 text-center py-2">
-  <p class="text-sm md:text-base font-semibold">
-    Offer ends in <span id="timer" class="font-bold">24:00:00</span> – Hurry!
-  </p>
-</div>
-
-<!-- Script untuk Countdown -->
 <script>
   function startCountdown(duration, display) {
     let timer = duration, hours, minutes, seconds;
