@@ -16,17 +16,24 @@
 
   
  <!--TOP HEADER -->   
-<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow text-center py-3 px-4">
-  <div class="flex flex-col items-center gap-2">
-    <p class="text-pink-600 font-semibold text-sm md:text-base">
-      Enjoy Enrolment Discounts of Up to <strong>$800</strong> at Little Unicorn Preschool – Limited Slots Available
-    </p>
-    <div id="countdown-wrapper" class="bg-pink-100 text-pink-800 text-sm md:text-base font-semibold px-4 py-1 rounded-full">
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow px-4 py-2">
+  <div class="flex flex-col items-center md:items-start gap-2">
+    
+    <!-- Bagian atas: Deskripsi & Tombol -->
+    <div class="w-full flex flex-col md:flex-row justify-between items-center md:items-center gap-2">
+      <p class="text-pink-600 font-semibold text-sm md:text-base text-center md:text-left">
+        Enjoy Enrolment Discounts of Up to <strong>$800</strong> at Little Unicorn Preschool – Limited Slots Available
+      </p>
+      <a href="#plan" class="bg-pink-500 text-white text-sm font-medium px-4 py-2 rounded-full shadow hover:bg-pink-600 transition whitespace-nowrap">
+        I'm Interested
+      </a>
+    </div>
+
+    <!-- Countdown di bawah -->
+    <div id="countdown-wrapper" class="bg-pink-100 text-pink-800 text-sm md:text-base font-semibold px-4 py-1 rounded-full text-center w-full">
       Offer ends in <span id="timer" class="font-bold">24:00:00</span> – Hurry!
     </div>
-    <a href="#plan" class="bg-pink-500 text-white text-sm font-medium px-4 py-2 rounded-full shadow hover:bg-pink-600 transition whitespace-nowrap mt-1">
-      I'm Interested
-    </a>
+
   </div>
 </header>
 
