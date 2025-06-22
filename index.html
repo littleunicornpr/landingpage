@@ -365,7 +365,6 @@
   </div>
 </section>
 
-
 <section class="py-16 px-6 bg-white">
   <!-- Gambar di atas -->
   <div class="max-w-5xl mx-auto text-center mb-12">
@@ -375,7 +374,7 @@
   <!-- Dropdown Menu -->
   <div class="max-w-lg mx-auto text-center">
     <label for="plan" class="block mb-4 text-2xl font-bold text-blue-800">Select Program</label>
-    <select id="plan" onchange="showprice()" class="w-full px-6 py-3 text-lg border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+    <select id="plan" onchange="showPlan()" class="w-full px-6 py-3 text-lg border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400">
       <option value="infant">Infant Care (0–18 months)</option>
       <option value="childcare">Childcare (18 months–6 years)</option>
     </select>
@@ -391,7 +390,7 @@
       <li class="font-bold">Total Payable: <span class="text-blue-600">$1,400/month</span></li>
     </ul>
     <div class="mt-8 text-center">
-      <a href="#price" class="inline-block bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-full shadow hover:bg-blue-700 transition">
+      <a href="#Price" class="inline-block bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-full shadow hover:bg-blue-700 transition">
         Register for Infant Care
       </a>
     </div>
@@ -417,7 +416,7 @@
     </div>
 
     <div class="mt-8 text-center">
-      <a href="https://littleunicornpreschool.com/contact-us/" class="inline-block bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-full shadow hover:bg-blue-700 transition">
+      <a href="#Price" class="inline-block bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-full shadow hover:bg-blue-700 transition">
         Register for Childcare
       </a>
     </div>
@@ -425,12 +424,14 @@
 </section>
 
 <script>
-  function showprice() {
-    const price = document.getElementById('price').value;
-    document.getElementById('infant').classList.toggle('hidden', price !== 'infant');
-    document.getElementById('childcare').classList.toggle('hidden', price !== 'childcare');
+  function showPlan() {
+    const plan = document.getElementById('plan').value;
+    document.getElementById('infant').classList.toggle('hidden', plan !== 'infant');
+    document.getElementById('childcare').classList.toggle('hidden', plan !== 'childcare');
   }
 </script>
+
+
 
 
 
