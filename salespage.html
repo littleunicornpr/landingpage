@@ -680,11 +680,22 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-<section class="bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 py-16 px-6">
+ <section class="bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 py-16 px-6">
   <div class="max-w-6xl mx-auto text-center">
     <h3 class="text-3xl font-bold text-pink-700 mb-8"> What Parents Are Saying</h3>
     <div class="relative">
+      <!-- Arrow Buttons Inside Testimonial Area -->
+      <button id="prevSlide" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-pink-600 p-2 rounded-full shadow">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button id="nextSlide" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-pink-600 p-2 rounded-full shadow">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
       <div id="testimonialSlider" class="flex flex-wrap justify-center gap-6 mb-6">
         <div class="testimonial-card bg-white/80 backdrop-blur-md p-6 rounded-xl shadow border-l-4 border-pink-300 w-full md:w-[30%]">
           <p class="text-gray-700 italic">“My daughter loves going to school every day. The teachers are caring and creative!”</p>
@@ -711,13 +722,10 @@
           <p class="mt-4 font-semibold text-blue-600">— Nurul Hassan</p>
         </div>
       </div>
-      <div class="flex justify-center gap-4">
-        <button id="prevSlide" class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600">← Prev</button>
-        <button id="nextSlide" class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600">Next →</button>
-      </div>
     </div>
   </div>
 </section>
+
 <script>
   let currentSlide = 0;
   const cardsPerPage = 3;
@@ -745,6 +753,7 @@
 
   showTestimonials(currentSlide);
 </script>
+
 
  <!-- Call-to-Action Section -->
 <section class="bg-pink-50 py-16 px-6 text-center">
