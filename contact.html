@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Free Consultation Form</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-yellow-300 min-h-screen flex items-center justify-center px-4">
-  <form action="send_contact.php" method="POST" class="bg-white bg-opacity-50 p-6 md:p-10 rounded-xl max-w-3xl w-full">
+
+  <form 
+    action="https://formsubmit.co/admin@littleunicornpreschool.com" 
+    method="POST"
+    class="bg-white bg-opacity-50 p-6 md:p-10 rounded-xl max-w-3xl w-full"
+  >
+    <!-- Hidden config -->
+    <input type="hidden" name="_subject" value="New Consultation Request from Website">
+    <input type="hidden" name="_cc" value="huangxiaoyan19890929@gmail.com">
+    <input type="hidden" name="_next" value="https://littleunicornpr.github.io/landingpage/thankyou.html">
+    <input type="hidden" name="_captcha" value="false">
+
     <div class="grid md:grid-cols-2 gap-6">
       <div>
         <label class="block text-gray-700 font-semibold mb-2">Parent's Particulars</label>
         <input type="text" name="parent_name" required placeholder="Full Name"
-               class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none">
+          class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none" />
       </div>
+
       <div>
         <label class="block text-gray-700 font-semibold mb-2">Child's Particulars</label>
         <input type="text" name="child_name" required placeholder="Full Name"
-               class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none">
+          class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none" />
       </div>
+
       <div>
         <label class="block text-gray-700 font-semibold mb-2">Contact</label>
         <input type="text" name="contact" required placeholder="Phone Number"
-               class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none">
+          class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none" />
       </div>
+
       <div>
         <label class="block text-gray-700 font-semibold mb-2">Birthday</label>
         <input type="date" name="birthday" required
-               class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none">
+          class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none" />
       </div>
+
       <div>
         <label class="block text-gray-700 font-semibold mb-2">Email</label>
         <input type="email" name="email" required placeholder="Email"
-               class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none">
+          class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none" />
       </div>
+
       <div>
         <label class="block text-gray-700 font-semibold mb-2">Tour Date</label>
         <input type="date" name="tour_date" required
-               class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none">
+          class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none" />
       </div>
     </div>
 
     <div class="mt-6">
       <textarea name="message" rows="5" placeholder="Leave us a message..."
-                class="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none"></textarea>
+        class="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none"></textarea>
     </div>
 
     <div class="mt-6 text-center">
       <button type="submit"
-              class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+        class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
         FREE CONSULTATION
       </button>
     </div>
   </form>
+
 </body>
 </html>
