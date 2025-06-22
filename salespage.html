@@ -590,8 +590,20 @@
 <section class="bg-white py-12 px-6">
   <div class="max-w-5xl mx-auto text-center">
     <h3 class="text-3xl font-bold text-blue-800 mb-6">Empowering Every Child to Learn, Explore, and Thrive.</h3>
-    
-    <div class="relative overflow-hidden pl-10 -ml-10">
+
+    <div class="relative">
+      <!-- Arrow Buttons (inside image area) -->
+      <button id="prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-blue-800 p-2 rounded-full shadow-md z-10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button id="next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-blue-800 p-2 rounded-full shadow-md z-10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
       <!-- Slider -->
       <div id="slider" class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scroll-smooth">
         <img src="https://littleunicornpr.github.io/landingpage/12.png" class="snap-center flex-shrink-0 w-80 md:w-96 rounded-lg shadow" alt="Activity 1">
@@ -614,18 +626,33 @@
 <script>
   const slider = document.getElementById('slider');
   const dots = document.querySelectorAll('#dots span');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
 
-  slider.addEventListener('scroll', () => {
+  function updateDots() {
     const scrollLeft = slider.scrollLeft;
-    const itemWidth = slider.querySelector('img').clientWidth + 16; // 16 = gap-4 (4 * 4px)
+    const itemWidth = slider.querySelector('img').clientWidth + 16;
     const index = Math.round(scrollLeft / itemWidth);
-    
+
     dots.forEach((dot, i) => {
       dot.classList.toggle('bg-blue-800', i === index);
       dot.classList.toggle('bg-blue-300', i !== index);
     });
+  }
+
+  slider.addEventListener('scroll', updateDots);
+
+  next.addEventListener('click', () => {
+    const itemWidth = slider.querySelector('img').clientWidth + 16;
+    slider.scrollBy({ left: itemWidth, behavior: 'smooth' });
+  });
+
+  prev.addEventListener('click', () => {
+    const itemWidth = slider.querySelector('img').clientWidth + 16;
+    slider.scrollBy({ left: -itemWidth, behavior: 'smooth' });
   });
 </script>
+
 
 
  <section class="bg-blue-50 py-16 px-6">
