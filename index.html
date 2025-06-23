@@ -73,62 +73,6 @@
   .carousel-container {
     overflow-x: hidden;
   }
-     .slider-container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-
-  .slider-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .slide {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.9);
-    padding: 0.5rem;
-    border-radius: 9999px;
-    z-index: 10;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    cursor: pointer;
-  }
-
-  .slider-btn.left {
-    left: 10px;
-  }
-
-  .slider-btn.right {
-    right: 10px;
-  }
-
-  .dots {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-
-  .dot {
-    width: 12px;
-    height: 12px;
-    background-color: #93c5fd; /* blue-300 */
-    border-radius: 9999px;
-    transition: background-color 0.3s;
-  }
-
-  .dot.active {
-    background-color: #1e40af; /* blue-800 */
-  }
   </style>
 </head>
 <body class="bg-blue-50 text-gray-800">
@@ -149,10 +93,10 @@
 <header id="promo-header" class="sticky top-0 z-50 bg-gradient-animated backdrop-blur-md shadow px-4 py-3">
   <div class="flex flex-col items-center gap-2 text-center">
 
-<!-- Deskripsi -->
-<p class="text-pink-600 font-semibold text-2xl md:text-3xl">
-  Enjoy Enrolment Discounts of Up to <strong>$800</strong> at Little Unicorn Preschool – Limited Slots Available
-</p>
+    <!-- Deskripsi -->
+    <p class="text-pink-600 font-semibold text-3xl md:text-base">
+      Enjoy Enrolment Discounts of Up to <strong>$800</strong> at Little Unicorn Preschool – Limited Slots Available
+    </p>
 
     <!-- Countdown dan Tombol sejajar -->
     <div class="flex flex-row items-center justify-center gap-3 text-2xl">
@@ -194,12 +138,48 @@
 
 
 <!-- Hero Section -->
+ <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8 text-left">
+      <div class="bg-white/70 backdrop-blur-md border border-pink-200 p-6 rounded-2xl shadow-lg">
+        <h3 class="text-2xl font-semibold text-pink-600 mb-2">Why Choose Us?</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+         <li>Early childcare centre accredited by ECDA</li>
+         <li>Experienced educators with preschool and kindergarten expertise</li>
+        <li>A safe, clean, and stimulating learning environment</li>
+        <li>Personalized care and learning in small class sizes</li>
+        </ul>
+      </div>
+   
+   <section class="bg-blue-50 py-16 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-3xl font-bold text-blue-800 mb-4">Why Parents Choose Us</h3>
+      <p class="text-lg text-gray-700 mb-10">Our approach nurtures your child’s natural curiosity, builds independence, and provides an engaging learning environment that feels just like home.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow text-left">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">Gentle Teaching</h4>
+          <p class="text-gray-600">We guide children with love, empathy, and patience to nurture confidence and self-esteem.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow text-left">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">Holistic Curriculum</h4>
+          <p class="text-gray-600">Our curriculum combines academic readiness, values education, and social-emotional learning to support whole-child development.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow text-left">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">Passionate Teachers</h4>
+          <p class="text-gray-600">Our educators are highly qualified and deeply committed to every child's growth journey.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow text-left">
+          <h4 class="text-xl font-semibold text-blue-700 mb-2">Enriched Environment</h4>
+          <p class="text-gray-600">A fun and functional space with themed rooms, play corners, and sensory learning tools for young learners.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Penutup Hero Section -->
 
 <section class="bg-white py-16 px-6">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
     <!-- Kiri: Tulisan -->
     <div class="md:w-1/2 text-center md:text-left">
-      <h2 class="text-4xl font-bold text-blue-800 mb-4">Welcome to Little Unicorn Preschool</h2>
+      <h2 class="text-4xl font-bold text-blue-800 mb-4">Your Child Deserves the Best Start. Discover the Magic of Little Unicorn Preschool</h2>
       <p class="text-lg text-gray-700 mb-6">Little Unicorn Preschool offers specialised infant-care and child-care services for children aged 3 months to 6 years. Our qualified educators provide best-practice learning in a nurturing, engaging environment. Choose Little Unicorn for trusted early childhood education that helps every child thrive and grow with confidence.</p>
       <a href="#price" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition">Secure Your Child’s Spot</a>
     </div>
@@ -209,10 +189,7 @@
     </div>
   </div>
 </section>
-
-<!-- Penutup Hero Section -->
-
-
+  
 <section class="bg-gradient-to-tr from-blue-100 via-pink-100 to-purple-100 py-16 px-6">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-4xl font-bold text-purple-700 mb-4">Gallery of Happy Moments</h2>
@@ -295,17 +272,6 @@
       Looking for a preschool with daycare near me? Little Unicorn is more than a preschool kindergarten — we’re a nurturing early childcare centre supporting your child from first steps to school readiness. Our integrated childcare and preschool education encourages learning through play, inquiry, and care.
     </p>
 
-    <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8 text-left">
-      <div class="bg-white/70 backdrop-blur-md border border-pink-200 p-6 rounded-2xl shadow-lg">
-        <h3 class="text-2xl font-semibold text-pink-600 mb-2">Why Choose Us?</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
-         <li>Early childcare centre accredited by ECDA</li>
-         <li>Experienced educators with preschool and kindergarten expertise</li>
-        <li>A safe, clean, and stimulating learning environment</li>
-        <li>Personalized care and learning in small class sizes</li>
-
-        </ul>
-      </div>
 
       <div class="bg-white/70 backdrop-blur-md border border-purple-200 p-6 rounded-2xl shadow-lg">
         <h3 class="text-2xl font-semibold text-purple-600 mb-2">Our Preschool & Daycare Benefits</h3>
@@ -380,33 +346,6 @@
     </div>
   </div>
 </section>
-
-
-  
-   <section class="bg-blue-50 py-16 px-6">
-    <div class="max-w-5xl mx-auto text-center">
-      <h3 class="text-3xl font-bold text-blue-800 mb-4">Why Parents Choose Us</h3>
-      <p class="text-lg text-gray-700 mb-10">Our approach nurtures your child’s natural curiosity, builds independence, and provides an engaging learning environment that feels just like home.</p>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-lg p-6 shadow text-left">
-          <h4 class="text-xl font-semibold text-blue-700 mb-2">Gentle Teaching</h4>
-          <p class="text-gray-600">We guide children with love, empathy, and patience to nurture confidence and self-esteem.</p>
-        </div>
-        <div class="bg-white rounded-lg p-6 shadow text-left">
-          <h4 class="text-xl font-semibold text-blue-700 mb-2">Holistic Curriculum</h4>
-          <p class="text-gray-600">Our curriculum combines academic readiness, values education, and social-emotional learning to support whole-child development.</p>
-        </div>
-        <div class="bg-white rounded-lg p-6 shadow text-left">
-          <h4 class="text-xl font-semibold text-blue-700 mb-2">Passionate Teachers</h4>
-          <p class="text-gray-600">Our educators are highly qualified and deeply committed to every child's growth journey.</p>
-        </div>
-        <div class="bg-white rounded-lg p-6 shadow text-left">
-          <h4 class="text-xl font-semibold text-blue-700 mb-2">Enriched Environment</h4>
-          <p class="text-gray-600">A fun and functional space with themed rooms, play corners, and sensory learning tools for young learners.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="bg-white py-16 px-6">
   <div class="max-w-4xl mx-auto text-center">
@@ -484,38 +423,69 @@
     <h3 class="text-3xl font-bold text-blue-800 mb-6">Empowering Every Child to Learn, Explore, and Thrive.</h3>
 
     <div class="relative">
-  <!-- Tombol kiri -->
-  <button onclick="scrollSlider(-1)" class="slider-btn left-2">
-    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" stroke-width="2"
-      viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-    </svg>
-  </button>
+      <!-- Arrow Buttons (inside image area) -->
+      <button id="prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-blue-800 p-2 rounded-full shadow-md z-10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button id="next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-blue-800 p-2 rounded-full shadow-md z-10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
 
-  <!-- Tombol kanan -->
-  <button onclick="scrollSlider(1)" class="slider-btn right-2">
-    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" stroke-width="2"
-      viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-    </svg>
-  </button>
+      <!-- Slider -->
+      <div id="slider" class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scroll-smooth">
+        <img src="https://littleunicornpr.github.io/landingpage/12.png" class="snap-center flex-shrink-0 w-80 md:w-96 rounded-lg shadow" alt="Activity 1">
+        <img src="https://littleunicornpr.github.io/landingpage/13.png" class="snap-center flex-shrink-0 w-80 md:w-96 rounded-lg shadow" alt="Activity 2">
+        <img src="https://littleunicornpr.github.io/landingpage/14.png" class="snap-center flex-shrink-0 w-80 md:w-96 rounded-lg shadow" alt="Activity 3">
+        <img src="https://littleunicornpr.github.io/landingpage/15.png" class="snap-center flex-shrink-0 w-80 md:w-96 rounded-lg shadow" alt="Activity 4">
+      </div>
+    </div>
 
-  <!-- Slider isi -->
-  <div id="manualSlider" class="flex gap-4 overflow-x-auto scroll-smooth px-4 py-4">
-    <img src="https://littleunicornpr.github.io/landingpage/12.png" class="w-80 flex-shrink-0 rounded-lg shadow" />
-    <img src="https://littleunicornpr.github.io/landingpage/13.png" class="w-80 flex-shrink-0 rounded-lg shadow" />
-    <img src="https://littleunicornpr.github.io/landingpage/14.png" class="w-80 flex-shrink-0 rounded-lg shadow" />
-    <img src="https://littleunicornpr.github.io/landingpage/15.png" class="w-80 flex-shrink-0 rounded-lg shadow" />
+    <!-- Dot Navigation -->
+    <div id="dots" class="mt-6 flex justify-center gap-2">
+      <span class="w-3 h-3 bg-blue-300 rounded-full transition-all duration-300"></span>
+      <span class="w-3 h-3 bg-blue-300 rounded-full transition-all duration-300"></span>
+      <span class="w-3 h-3 bg-blue-300 rounded-full transition-all duration-300"></span>
+      <span class="w-3 h-3 bg-blue-300 rounded-full transition-all duration-300"></span>
+    </div>
   </div>
-</div>
+</section>
 
 <script>
-  function scrollSlider(direction) {
-    const slider = document.getElementById('manualSlider');
-    const itemWidth = slider.querySelector('img').clientWidth + 16; // tambahkan gap
-    slider.scrollBy({ left: direction * itemWidth, behavior: 'smooth' });
+  const slider = document.getElementById('slider');
+  const dots = document.querySelectorAll('#dots span');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+
+  function updateDots() {
+    const scrollLeft = slider.scrollLeft;
+    const itemWidth = slider.querySelector('img').clientWidth + 16;
+    const index = Math.round(scrollLeft / itemWidth);
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('bg-blue-800', i === index);
+      dot.classList.toggle('bg-blue-300', i !== index);
+    });
   }
+
+  slider.addEventListener('scroll', updateDots);
+
+  next.addEventListener('click', () => {
+    const itemWidth = slider.querySelector('img').clientWidth + 16;
+    slider.scrollBy({ left: itemWidth, behavior: 'smooth' });
+  });
+
+  prev.addEventListener('click', () => {
+    const itemWidth = slider.querySelector('img').clientWidth + 16;
+    slider.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+  });
 </script>
+
+
+
 <section class="bg-white py-16 px-6">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
     <div class="md:w-1/2">
