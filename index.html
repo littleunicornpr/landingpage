@@ -54,6 +54,25 @@
   background-size: 200% 200%;
   animation: gradientMove 2s linear infinite;
 }
+  .scrolling-carousel {
+    display: flex;
+    gap: 1.5rem;
+    min-width: max-content;
+    animation: scroll-left 30s linear infinite;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .carousel-container {
+    overflow-x: hidden;
+  }
   </style>
 </head>
 <body class="bg-blue-50 text-gray-800">
@@ -339,23 +358,33 @@
     <img src="https://littleunicornpr.github.io/landingpage/howtoenroll.png" alt="Enrollment Banner" class="mx-auto mb-8 rounded-xl shadow-lg max-w-full h-auto">
 
     <h3 class="text-3xl font-bold text-blue-800 mb-4">Limited Enrollment Slots Available</h3>
-    <p class="text-lg text-gray-700 mb-6">Secure your child’s spot at one of Singapore’s most nurturing preschools. Little Unicorn Preschool offers holistic learning, loving teachers, and a joyful community.</p>
-    <div class="overflow-x-auto">
-  <ul class="flex space-x-6 text-gray-700 min-w-max px-2 py-4">
+<p class="text-lg text-gray-700 mb-6">
+  Secure your child’s spot at one of Singapore’s most nurturing preschools. Little Unicorn Preschool offers holistic learning, loving teachers, and a joyful community.
+</p>
+
+<div class="carousel-container">
+  <ul class="scrolling-carousel text-gray-700 px-2 py-4">
     <li class="flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow p-4 w-72">
       Focus on character development and essential values
     </li>
     <li class="flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow p-4 w-72">
-       Qualified and passionate educators
+      Qualified and passionate educators
     </li>
     <li class="flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow p-4 w-72">
       Strong academic and emotional foundation
     </li>
     <li class="flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow p-4 w-72">
-       Limited class sizes for personalized attention
+      Limited class sizes for personalized attention
     </li>
     <li class="flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow p-4 w-72">
       Safe and joyful environment
+    </li>
+    <!-- Duplicate items to create seamless loop -->
+    <li class="flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow p-4 w-72">
+      Focus on character development and essential values
+    </li>
+    <li class="flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow p-4 w-72">
+      Qualified and passionate educators
     </li>
   </ul>
 </div>
