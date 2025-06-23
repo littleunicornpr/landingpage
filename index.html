@@ -161,6 +161,26 @@
       background: #3b82f6;
       transform: scale(1.2);
     }
+        /* Custom Bullet Points */
+    .custom-bullet {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .custom-bullet::before {
+      content: "✨";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.2rem;
+      color: #3b82f6;
+    }
+
+    .custom-bullet:hover::before {
+      transform: scale(1.2);
+      transition: transform 0.2s ease;
+    }
   </style>
 </head>
 <body class="bg-blue-50 text-gray-800">
