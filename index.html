@@ -17,19 +17,6 @@
       font-family: 'Nunito', sans-serif;
     }
 
-    @keyframes scroll {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    .animate-scroll {
-      animation: scroll 15s linear infinite;
-    }
-
     @keyframes blink {
       0%, 100% {
         opacity: 1;
@@ -72,6 +59,24 @@
       flex-shrink: 0;
     }
 
+    /* Mobile-optimized slider images */
+    .slider-item img {
+      max-height: 300px;
+      object-fit: contain;
+    }
+
+    @media (min-width: 768px) {
+      .slider-item img {
+        max-height: 400px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .slider-item img {
+        max-height: 500px;
+      }
+    }
+
     .slider-nav {
       position: absolute;
       top: 50%;
@@ -79,17 +84,25 @@
       background: rgba(255, 255, 255, 0.9);
       border: none;
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: bold;
       color: #3b82f6;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       z-index: 10;
+    }
+
+    @media (min-width: 768px) {
+      .slider-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
     }
 
     .slider-nav:hover {
@@ -98,27 +111,50 @@
     }
 
     .slider-nav.prev {
-      left: 15px;
+      left: 10px;
     }
 
     .slider-nav.next {
-      right: 15px;
+      right: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .slider-nav.prev {
+        left: 15px;
+      }
+      .slider-nav.next {
+        right: 15px;
+      }
     }
 
     .slider-dots {
       display: flex;
       justify-content: center;
-      gap: 8px;
-      margin-top: 15px;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .slider-dots {
+        gap: 8px;
+        margin-top: 15px;
+      }
     }
 
     .dot {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: rgba(59, 130, 246, 0.3);
       cursor: pointer;
       transition: all 0.3s ease;
+    }
+
+    @media (min-width: 768px) {
+      .dot {
+        width: 10px;
+        height: 10px;
+      }
     }
 
     .dot.active {
@@ -131,7 +167,7 @@
 
   <!-- Header with Logo - NOT STICKY (STATIC) -->
   <header class="bg-white backdrop-blur shadow-sm">
-    <div class="container mx-auto px-4 py-4 flex justify-center items-center text-center">
+    <div class="container mx-auto px-4 py-6 flex justify-center items-center text-center">
       <div class="flex items-center gap-3">
         <img src="https://littleunicornpr.github.io/landingpage/logo.png" alt="Little Unicorn Preschool Logo" class="h-16 w-auto">
       </div>
@@ -139,19 +175,19 @@
   </header>
 
   <!-- PROMOTIONAL BANNER - NOT STICKY -->
-  <section class="relative overflow-hidden bg-gradient-to-r from-pink-500 via-purple-600 to-blue-600 py-12 px-6">
+  <section class="relative overflow-hidden bg-gradient-to-r from-pink-500 via-purple-600 to-blue-600 py-8 md:py-12 px-4 md:px-6">
     <div class="absolute inset-0 bg-gradient-to-r from-pink-400/20 via-purple-500/20 to-blue-500/20 animate-pulse"></div>
     <div class="relative max-w-6xl mx-auto text-center">
-      <div class="mb-8">
-        <h1 class="text-3xl md:text-5xl font-black text-white mb-6 drop-shadow-2xl animate-blink">HUGE SAVINGS ALERT!</h1>
-        <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 shadow-2xl border-4 border-yellow-400">
-          <p class="text-2xl md:text-3xl font-bold text-pink-600 mb-4">Enjoy Enrolment Discounts of Up to</p>
-          <div class="text-4xl md:text-6xl font-black text-red-600 mb-4 animate-pulse">$800</div>
-          <p class="text-xl md:text-2xl font-bold text-purple-700 mb-6">
+      <div class="mb-6 md:mb-8">
+        <h1 class="text-2xl md:text-4xl lg:text-5xl font-black text-white mb-4 md:mb-6 drop-shadow-2xl animate-blink">HUGE SAVINGS ALERT!</h1>
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl md:rounded-3xl p-4 md:p-6 shadow-2xl border-4 border-yellow-400">
+          <p class="text-lg md:text-2xl lg:text-3xl font-bold text-pink-600 mb-3 md:mb-4">Enjoy Enrolment Discounts of Up to</p>
+          <div class="text-3xl md:text-5xl lg:text-6xl font-black text-red-600 mb-3 md:mb-4 animate-pulse">$800</div>
+          <p class="text-base md:text-xl lg:text-2xl font-bold text-purple-700 mb-4 md:mb-6">
             at Little Unicorn Preschool. Limited Slots Available
           </p>
 
-          <a href="#price" class="inline-block bg-gradient-to-r from-pink-500 to-red-500 text-white text-lg md:text-2xl font-black px-8 py-4 rounded-full shadow-2xl hover:from-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 animate-bounce">
+          <a href="#price" class="inline-block bg-gradient-to-r from-pink-500 to-red-500 text-white text-base md:text-lg lg:text-2xl font-black px-6 md:px-8 py-3 md:py-4 rounded-full shadow-2xl hover:from-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 animate-bounce">
             I'M INTERESTED! SECURE MY SPOT!
           </a>
         </div>
@@ -183,18 +219,18 @@
     </div>
   </div>
 
-  <!-- Why Choose Us & Why Parents Choose Us - MOVED TO TOP -->
-  <section class="bg-gradient-to-br from-rose-100 via-pink-100 to-purple-100 py-16 px-6">
+  <!-- Why Choose Us & Why Parents Choose Us -->
+  <section class="bg-gradient-to-br from-rose-100 via-pink-100 to-purple-100 py-12 md:py-16 px-4 md:px-6">
     <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-purple-700 mb-4">Why Choose Us & Why Parents Choose Us</h2>
-      <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-purple-700 mb-3 md:mb-4">Why Choose Us & Why Parents Choose Us</h2>
+      <p class="text-base md:text-lg text-gray-700 max-w-3xl mx-auto mb-8 md:mb-10">
         Looking for a preschool with daycare near me? Little Unicorn is more than a preschool kindergarten. We're a
         nurturing early childcare centre supporting your child from first steps to school readiness.
       </p>
 
-      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left mb-12">
-        <div class="bg-white/70 backdrop-blur-md border border-pink-200 p-6 rounded-2xl shadow-lg">
-          <h3 class="text-2xl font-semibold text-pink-600 mb-4">Why Choose Us?</h3>
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-left mb-8 md:mb-12">
+        <div class="bg-white/70 backdrop-blur-md border border-pink-200 p-4 md:p-6 rounded-2xl shadow-lg">
+          <h3 class="text-xl md:text-2xl font-semibold text-pink-600 mb-3 md:mb-4">Why Choose Us?</h3>
           <ul class="list-disc list-inside text-gray-700 space-y-2">
             <li>Early childcare centre accredited by ECDA</li>
             <li>Experienced educators with preschool and kindergarten expertise</li>
@@ -203,8 +239,8 @@
           </ul>
         </div>
 
-        <div class="bg-white/70 backdrop-blur-md border border-purple-200 p-6 rounded-2xl shadow-lg">
-          <h3 class="text-2xl font-semibold text-purple-600 mb-4">Our Preschool & Daycare Benefits</h3>
+        <div class="bg-white/70 backdrop-blur-md border border-purple-200 p-4 md:p-6 rounded-2xl shadow-lg">
+          <h3 class="text-xl md:text-2xl font-semibold text-purple-600 mb-3 md:mb-4">Our Preschool & Daycare Benefits</h3>
           <ul class="list-disc list-inside text-gray-700 space-y-2">
             <li>Comprehensive childcare and preschool curriculum in one program</li>
             <li>Conveniently located for families searching for a preschool with daycare near me</li>
@@ -213,8 +249,8 @@
           </ul>
         </div>
 
-        <div class="bg-white/70 backdrop-blur-md border border-blue-200 p-6 rounded-2xl shadow-lg">
-          <h3 class="text-2xl font-semibold text-blue-600 mb-4">Why Parents Choose Us</h3>
+        <div class="bg-white/70 backdrop-blur-md border border-blue-200 p-4 md:p-6 rounded-2xl shadow-lg">
+          <h3 class="text-xl md:text-2xl font-semibold text-blue-600 mb-3 md:mb-4">Why Parents Choose Us</h3>
           <ul class="list-disc list-inside text-gray-700 space-y-2">
             <li>Gentle teaching with love, empathy, and patience</li>
             <li>Holistic curriculum combining academic readiness and values</li>
@@ -224,8 +260,8 @@
         </div>
       </div>
 
-      <div class="mt-10">
-        <a href="#price" class="inline-block bg-pink-500 text-white px-8 py-3 rounded-full shadow hover:bg-pink-600 transition">
+      <div class="mt-6 md:mt-10">
+        <a href="#price" class="inline-block bg-pink-500 text-white px-6 md:px-8 py-3 rounded-full shadow hover:bg-pink-600 transition">
           Book a Visit Today
         </a>
       </div>
@@ -233,20 +269,20 @@
   </section>
 
   <!-- COMBINED ECDA Section -->
-  <section class="bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 py-16 px-6">
+  <section class="bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 py-12 md:py-16 px-4 md:px-6">
     <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-blue-800 mb-6">ECDA Accredited & Certified Preschool</h2>
-      <p class="text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-800 mb-4 md:mb-6">ECDA Accredited & Certified Preschool</h2>
+      <p class="text-base md:text-lg text-gray-700 mb-6 md:mb-8 max-w-4xl mx-auto">
         Little Unicorn is proud to be among the leading ECDA certified preschools in Singapore. As an ECDA approved
         preschool, we meet the highest national standards in early childhood education. Our ECDA accredited
         preschool programs are designed to create a nurturing and stimulating environment for children aged 3 months
         to 6 years.
       </p>
 
-      <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        <div class="bg-blue-50 rounded-xl shadow p-6 text-left">
-          <h3 class="text-2xl font-semibold text-blue-700 mb-4">What ECDA Certification Means</h3>
-          <p class="text-gray-700 mb-4">
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+        <div class="bg-blue-50 rounded-xl shadow p-4 md:p-6 text-left">
+          <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-3 md:mb-4">What ECDA Certification Means</h3>
+          <p class="text-gray-700 mb-3 md:mb-4">
             Being a certified preschool by ECDA means our programs, educators, and learning spaces meet strict
             national standards ensuring safe, effective, and age appropriate education for young children.
           </p>
@@ -258,8 +294,8 @@
           </ul>
         </div>
 
-        <div class="bg-blue-50 rounded-xl shadow p-6 text-left">
-          <h3 class="text-2xl font-semibold text-blue-700 mb-4">Our ECDA Programs</h3>
+        <div class="bg-blue-50 rounded-xl shadow p-4 md:p-6 text-left">
+          <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-3 md:mb-4">Our ECDA Programs</h3>
           <div class="space-y-4">
             <div>
               <h4 class="font-semibold text-blue-600">Infant Care (3 to 18 months)</h4>
@@ -280,19 +316,19 @@
       </div>
 
       <div class="text-center">
-        <a href="#price" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full shadow hover:bg-blue-700 transition">
+        <a href="#price" class="inline-block bg-blue-600 text-white px-6 md:px-8 py-3 rounded-full shadow hover:bg-blue-700 transition">
           Learn More About Our ECDA Programs
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Welcome Section - MOVED AFTER ECDA -->
-  <section class="bg-gradient-to-br from-green-100 via-emerald-100 to-teal-100 py-16 px-6">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+  <!-- Welcome Section -->
+  <section class="bg-gradient-to-br from-green-100 via-emerald-100 to-teal-100 py-12 md:py-16 px-4 md:px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-10">
       <div class="md:w-1/2 text-center md:text-left">
-        <h2 class="text-4xl font-bold text-blue-800 mb-4">Unlock Your Child's Bright Future at Little Unicorn Preschool</h2>
-        <p class="text-lg text-gray-700 mb-6">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-800 mb-3 md:mb-4">Unlock Your Child's Bright Future at Little Unicorn Preschool</h2>
+        <p class="text-base md:text-lg text-gray-700 mb-4 md:mb-6">
           Little Unicorn Preschool offers specialised infant care and child care services for children aged 3 months
           to 6 years. Our qualified educators provide best practice learning in a nurturing, engaging environment.
           Choose Little Unicorn for trusted early childhood education that helps every child thrive and grow with
@@ -309,38 +345,38 @@
   </section>
 
   <!-- Gallery Section -->
-  <section class="bg-gradient-to-br from-yellow-100 via-orange-100 to-pink-100 py-16 px-6">
+  <section class="bg-gradient-to-br from-yellow-100 via-orange-100 to-pink-100 py-12 md:py-16 px-4 md:px-6">
     <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-purple-700 mb-4">Gallery of Happy Moments</h2>
-      <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-purple-700 mb-3 md:mb-4">Gallery of Happy Moments</h2>
+      <p class="text-base md:text-lg text-gray-700 max-w-3xl mx-auto mb-8 md:mb-10">
         Discover the magical world of Little Unicorn, where every day is filled with joy, curiosity, and wonder. Our
         gallery highlights the vibrant moments and happy experiences that children enjoy at our preschool and
         childcare centre.
       </p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
         <div class="overflow-hidden rounded-2xl shadow-lg">
-          <img src="https://littleunicornpr.github.io/landingpage/20250416_104721(0).jpg" alt="Happy moment 1" class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
+          <img src="https://littleunicornpr.github.io/landingpage/20250416_104721(0).jpg" alt="Happy moment 1" class="w-full h-48 md:h-60 object-cover hover:scale-105 transition-transform duration-300">
         </div>
         <div class="overflow-hidden rounded-2xl shadow-lg">
-          <img src="https://littleunicornpr.github.io/landingpage/20250409_100322.jpg" alt="Happy moment 2" class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
+          <img src="https://littleunicornpr.github.io/landingpage/20250409_100322.jpg" alt="Happy moment 2" class="w-full h-48 md:h-60 object-cover hover:scale-105 transition-transform duration-300">
         </div>
         <div class="overflow-hidden rounded-2xl shadow-lg">
-          <img src="https://littleunicornpr.github.io/landingpage/20250320_160556.jpg" alt="Happy moment 3" class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
+          <img src="https://littleunicornpr.github.io/landingpage/20250320_160556.jpg" alt="Happy moment 3" class="w-full h-48 md:h-60 object-cover hover:scale-105 transition-transform duration-300">
         </div>
         <div class="overflow-hidden rounded-2xl shadow-lg">
-          <img src="https://littleunicornpr.github.io/landingpage/20250312_122728.jpg" alt="Happy moment 4" class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
+          <img src="https://littleunicornpr.github.io/landingpage/20250312_122728.jpg" alt="Happy moment 4" class="w-full h-48 md:h-60 object-cover hover:scale-105 transition-transform duration-300">
         </div>
         <div class="overflow-hidden rounded-2xl shadow-lg">
-          <img src="https://littleunicornpr.github.io/landingpage/20250311_123342.jpg" alt="Happy moment 5" class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
+          <img src="https://littleunicornpr.github.io/landingpage/20250311_123342.jpg" alt="Happy moment 5" class="w-full h-48 md:h-60 object-cover hover:scale-105 transition-transform duration-300">
         </div>
         <div class="overflow-hidden rounded-2xl shadow-lg">
-          <img src="https://littleunicornpr.github.io/landingpage/20250416_124234.jpg" alt="Happy moment 6" class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
+          <img src="https://littleunicornpr.github.io/landingpage/20250416_124234.jpg" alt="Happy moment 6" class="w-full h-48 md:h-60 object-cover hover:scale-105 transition-transform duration-300">
         </div>
       </div>
 
-      <div class="mt-10">
-        <a href="#price" class="inline-block bg-purple-500 text-white px-8 py-3 rounded-full shadow hover:bg-purple-600 transition">
+      <div class="mt-8 md:mt-10">
+        <a href="#price" class="inline-block bg-purple-500 text-white px-6 md:px-8 py-3 rounded-full shadow hover:bg-purple-600 transition">
           Schedule a Visit
         </a>
       </div>
@@ -348,11 +384,11 @@
   </section>
 
   <!-- Reach Maximum Potential Section -->
-  <section class="bg-gradient-to-br from-purple-100 via-pink-100 to-rose-100 py-16 px-6">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+  <section class="bg-gradient-to-br from-purple-100 via-pink-100 to-rose-100 py-12 md:py-16 px-4 md:px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-10">
       <div class="md:w-1/2 text-center md:text-left">
-        <h2 class="text-4xl font-bold text-blue-800 mb-4">Reach Your Child's Maximum Potential</h2>
-        <p class="text-lg text-gray-700 mb-6">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-800 mb-3 md:mb-4">Reach Your Child's Maximum Potential</h2>
+        <p class="text-base md:text-lg text-gray-700 mb-4 md:mb-6">
           We warmly welcome your family to Little Unicorn Preschool, where every child is truly valued. We believe
           strong parent partnerships are essential to early development. Together, we nurture character, confidence,
           and independence through creative learning experiences.
@@ -368,44 +404,44 @@
   </section>
 
   <!-- Fun Activities Section -->
-  <section class="bg-gradient-to-br from-cyan-100 via-blue-100 to-indigo-100 py-12 px-6">
+  <section class="bg-gradient-to-br from-cyan-100 via-blue-100 to-indigo-100 py-10 md:py-12 px-4 md:px-6">
     <div class="max-w-3xl mx-auto text-center">
-      <h3 class="text-3xl font-bold text-blue-800 mb-4">Fun Activities & Gentle Learning</h3>
-      <p class="mb-6">
+      <h3 class="text-2xl md:text-3xl font-bold text-blue-800 mb-3 md:mb-4">Fun Activities & Gentle Learning</h3>
+      <p class="mb-4 md:mb-6">
         From taekwondo to cookery, music & science. We nurture creativity, coordination, and curiosity through
         active exploration and creative play.
       </p>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div class="bg-white rounded-lg p-4 shadow text-blue-700 font-semibold">Taekwondo</div>
-        <div class="bg-white rounded-lg p-4 shadow text-blue-700 font-semibold">Zumba</div>
-        <div class="bg-white rounded-lg p-4 shadow text-blue-700 font-semibold">Baking / Cookery</div>
-        <div class="bg-white rounded-lg p-4 shadow text-blue-700 font-semibold">Science Discovery Exploration</div>
-        <div class="bg-white rounded-lg p-4 shadow text-blue-700 font-semibold">Music & Movement</div>
-        <div class="bg-white rounded-lg p-4 shadow text-blue-700 font-semibold">Aesthetics & Creative Expression</div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+        <div class="bg-white rounded-lg p-3 md:p-4 shadow text-blue-700 font-semibold">Taekwondo</div>
+        <div class="bg-white rounded-lg p-3 md:p-4 shadow text-blue-700 font-semibold">Zumba</div>
+        <div class="bg-white rounded-lg p-3 md:p-4 shadow text-blue-700 font-semibold">Baking / Cookery</div>
+        <div class="bg-white rounded-lg p-3 md:p-4 shadow text-blue-700 font-semibold">Science Discovery Exploration</div>
+        <div class="bg-white rounded-lg p-3 md:p-4 shadow text-blue-700 font-semibold">Music & Movement</div>
+        <div class="bg-white rounded-lg p-3 md:p-4 shadow text-blue-700 font-semibold">Aesthetics & Creative Expression</div>
       </div>
     </div>
   </section>
 
-  <!-- Empowering Section with Slider -->
-  <section class="bg-gradient-to-br from-lime-100 via-green-100 to-emerald-100 py-12 px-6">
+  <!-- Empowering Section with Mobile-Optimized Slider -->
+  <section class="bg-gradient-to-br from-lime-100 via-green-100 to-emerald-100 py-10 md:py-12 px-4 md:px-6">
     <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-2xl md:text-3xl font-bold text-blue-800 mb-6">
+      <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-blue-800 mb-4 md:mb-6">
         Empowering Every Child to Learn, Explore, and Thrive.
       </h3>
 
       <div class="slider-container relative">
         <div class="slider-wrapper" id="sliderWrapper">
           <div class="slider-item">
-            <img src="https://littleunicornpr.github.io/landingpage/12.png" alt="Activity 1" class="w-full max-w-2xl mx-auto rounded-lg shadow">
+            <img src="https://littleunicornpr.github.io/landingpage/12.png" alt="Activity 1" class="w-full mx-auto rounded-lg shadow">
           </div>
           <div class="slider-item">
-            <img src="https://littleunicornpr.github.io/landingpage/13.png" alt="Activity 2" class="w-full max-w-2xl mx-auto rounded-lg shadow">
+            <img src="https://littleunicornpr.github.io/landingpage/13.png" alt="Activity 2" class="w-full mx-auto rounded-lg shadow">
           </div>
           <div class="slider-item">
-            <img src="https://littleunicornpr.github.io/landingpage/14.png" alt="Activity 3" class="w-full max-w-2xl mx-auto rounded-lg shadow">
+            <img src="https://littleunicornpr.github.io/landingpage/14.png" alt="Activity 3" class="w-full mx-auto rounded-lg shadow">
           </div>
           <div class="slider-item">
-            <img src="https://littleunicornpr.github.io/landingpage/15.png" alt="Activity 4" class="w-full max-w-2xl mx-auto rounded-lg shadow">
+            <img src="https://littleunicornpr.github.io/landingpage/15.png" alt="Activity 4" class="w-full mx-auto rounded-lg shadow">
           </div>
         </div>
         
@@ -422,52 +458,54 @@
     </div>
   </section>
 
-  <!-- Limited Enrollment Section -->
-  <section class="bg-gradient-to-br from-amber-100 via-yellow-100 to-orange-100 py-16 px-6">
+  <!-- Limited Enrollment Section - MOBILE FRIENDLY LIST -->
+  <section class="bg-gradient-to-br from-amber-100 via-yellow-100 to-orange-100 py-12 md:py-16 px-4 md:px-6">
     <div class="max-w-4xl mx-auto text-center">
-      <img src="https://littleunicornpr.github.io/landingpage/howtoenroll.png" alt="Enrollment Banner" class="mx-auto mb-8 rounded-xl shadow-lg max-w-full h-auto">
+      <img src="https://littleunicornpr.github.io/landingpage/howtoenroll.png" alt="Enrollment Banner" class="mx-auto mb-6 md:mb-8 rounded-xl shadow-lg max-w-full h-auto">
 
-      <h3 class="text-3xl font-bold text-blue-800 mb-4">Limited Enrollment Slots Available</h3>
-      <p class="text-lg text-gray-700 mb-6">
+      <h3 class="text-2xl md:text-3xl font-bold text-blue-800 mb-3 md:mb-4">Limited Enrollment Slots Available</h3>
+      <p class="text-base md:text-lg text-gray-700 mb-6 md:mb-8">
         Secure your child's spot at one of Singapore's most nurturing preschools. Little Unicorn Preschool offers
         holistic learning, loving teachers, and a joyful community.
       </p>
 
-      <div class="overflow-hidden">
-        <div class="flex gap-6 animate-scroll">
-          <div class="flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow p-4 w-72">
-            Focus on character development and essential values
-          </div>
-          <div class="flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow p-4 w-72">
-            Qualified and passionate educators
-          </div>
-          <div class="flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow p-4 w-72">
-            Strong academic and emotional foundation
-          </div>
-          <div class="flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow p-4 w-72">
-            Limited class sizes for personalized attention
-          </div>
-          <div class="flex-shrink-0 bg-white border border-gray-300 rounded-lg shadow p-4 w-72">
-            Safe and joyful environment
-          </div>
+      <!-- Mobile-Friendly Vertical List -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div class="bg-white border border-gray-300 rounded-lg shadow p-4 text-center">
+          <div class="text-blue-700 font-semibold">Focus on character development and essential values</div>
+        </div>
+        <div class="bg-white border border-gray-300 rounded-lg shadow p-4 text-center">
+          <div class="text-blue-700 font-semibold">Qualified and passionate educators</div>
+        </div>
+        <div class="bg-white border border-gray-300 rounded-lg shadow p-4 text-center">
+          <div class="text-blue-700 font-semibold">Strong academic and emotional foundation</div>
+        </div>
+        <div class="bg-white border border-gray-300 rounded-lg shadow p-4 text-center">
+          <div class="text-blue-700 font-semibold">Limited class sizes for personalized attention</div>
+        </div>
+        <div class="bg-white border border-gray-300 rounded-lg shadow p-4 text-center">
+          <div class="text-blue-700 font-semibold">Safe and joyful environment</div>
+        </div>
+        <div class="bg-white border border-gray-300 rounded-lg shadow p-4 text-center">
+          <div class="text-blue-700 font-semibold">Nurturing and supportive community</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Registration Section -->
-  <section class="bg-gradient-to-br from-teal-100 via-cyan-100 to-blue-100 py-16 px-6">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+  <section class="bg-gradient-to-br from-teal-100 via-cyan-100 to-blue-100 py-12 md:py-16 px-4 md:px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-10">
       <div class="md:w-1/2">
-        <h3 class="text-3xl font-bold text-blue-900 mb-4">
+        <h3 class="text-2xl md:text-3xl font-bold text-blue-900 mb-3 md:mb-4">
           Start Your Child's Learning Journey at a Trusted Preschool
         </h3>
-        <p class="text-gray-700 mb-6">
+        <p class="text-gray-700 mb-4 md:mb-6">
           Enroll today at <strong>Little Unicorn Preschool</strong>. A trusted
           <strong>preschool and childcare centre</strong> in Singapore. Our registration process is simple and fast,
           and we're here to support you every step of the way.
         </p>
-        <ul class="text-left text-gray-700 space-y-2 mb-6">
+        <ul class="text-left text-gray-700 space-y-2 mb-4 md:mb-6">
           <li>Book a tour with our friendly staff</li>
           <li>Learn more about fees, subsidies, and program options</li>
           <li>Reserve your preferred class schedule early</li>
@@ -485,21 +523,26 @@
   </section>
 
   <!-- Pricing Section -->
+  <section class="bg-gradient-to-br from-violet-100 via-purple-100 to-fuchsia-100 py-12 md:py-16 px-4 md:px-6">
+    <div class="max-w-5xl mx-auto text-center mb-8 md:mb-12">
+      <img src="https://littleunicornpr.github.io/landingpage/Imagelitlle%20web%20(1)%20(1).jpg" alt="Pricing Banner" class="mx-auto rounded-2xl shadow-xl max-w-full h-auto">
+    </div>
+
     <div id="price" class="max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-blue-800 mb-6">Preschool & Childcare Fees</h2>
-      <div class="bg-red-100 border-4 border-red-500 rounded-2xl p-6 mb-8">
-        <h3 class="text-2xl font-bold text-red-600 mb-2">SAVE UP TO $800 WITH OUR DISCOUNTS!</h3>
-        <p class="text-lg text-red-700">Limited time offer. Secure your spot now!</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-800 mb-4 md:mb-6">Preschool & Childcare Fees</h2>
+      <div class="bg-red-100 border-4 border-red-500 rounded-2xl p-4 md:p-6 mb-6 md:mb-8">
+        <h3 class="text-xl md:text-2xl font-bold text-red-600 mb-2">SAVE UP TO $800 WITH OUR DISCOUNTS!</h3>
+        <p class="text-base md:text-lg text-red-700">Limited time offer. Secure your spot now!</p>
       </div>
-      <p class="text-gray-700 max-w-2xl mx-auto mb-12">
+      <p class="text-gray-700 max-w-2xl mx-auto mb-8 md:mb-12">
         We offer transparent pricing with subsidies and school discounts to make quality early childhood education
         accessible for every family.
       </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-left">
         <!-- Infant Care -->
-        <div class="bg-blue-50 p-6 rounded-xl shadow border-2 border-blue-200">
-          <h3 class="text-2xl font-semibold text-blue-700 mb-4">Infant Care (0 to 18 months)</h3>
+        <div class="bg-blue-50 p-4 md:p-6 rounded-xl shadow border-2 border-blue-200">
+          <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-3 md:mb-4">Infant Care (0 to 18 months)</h3>
           <div class="space-y-3">
             <div class="flex justify-between items-center">
               <span class="text-gray-700">Full Fee:</span>
@@ -516,7 +559,7 @@
             <div class="border-t-2 border-blue-300 pt-3">
               <div class="flex justify-between items-center">
                 <span class="text-lg font-bold text-blue-700">Total Payable:</span>
-                <span class="text-2xl font-bold text-blue-600">$1,400/month</span>
+                <span class="text-xl md:text-2xl font-bold text-blue-600">$1,400/month</span>
               </div>
               <div class="bg-red-500 text-white text-center py-2 px-4 rounded-lg mt-3">
                 <span class="font-bold">YOU SAVE $800!</span>
@@ -526,8 +569,8 @@
         </div>
 
         <!-- Childcare -->
-        <div class="bg-blue-50 p-6 rounded-xl shadow border-2 border-blue-200">
-          <h3 class="text-2xl font-semibold text-blue-700 mb-4">Childcare (18 months to 6 years)</h3>
+        <div class="bg-blue-50 p-4 md:p-6 rounded-xl shadow border-2 border-blue-200">
+          <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-3 md:mb-4">Childcare (18 months to 6 years)</h3>
           <div class="space-y-3">
             <div class="flex justify-between items-center">
               <span class="text-gray-700">Actual Fee:</span>
@@ -544,7 +587,7 @@
             <div class="border-t-2 border-blue-300 pt-3">
               <div class="flex justify-between items-center">
                 <span class="text-lg font-bold text-blue-700">Total Payable:</span>
-                <span class="text-2xl font-bold text-blue-600">$1,188/month</span>
+                <span class="text-xl md:text-2xl font-bold text-blue-600">$1,188/month</span>
               </div>
               <div class="bg-green-500 text-white text-center py-2 px-4 rounded-lg mt-3">
                 <span class="font-bold">YOU SAVE $500!</span>
@@ -552,7 +595,7 @@
             </div>
           </div>
 
-          <div class="mt-6 bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
+          <div class="mt-4 md:mt-6 bg-yellow-100 border-2 border-yellow-400 rounded-lg p-3 md:p-4">
             <p class="font-bold text-yellow-800 mb-2">Special Referral Rate:</p>
             <div class="space-y-2 text-sm text-yellow-700">
               <div class="flex justify-between items-center">
@@ -561,7 +604,7 @@
               </div>
               <div class="flex justify-between items-center">
                 <span>With Referral Discount:</span>
-                <span class="text-2xl font-bold text-green-600">$888/month</span>
+                <span class="text-xl md:text-2xl font-bold text-green-600">$888/month</span>
               </div>
               <div class="bg-orange-500 text-white text-center py-1 px-2 rounded mt-2">
                 <span class="font-bold">SAVE $800 WITH REFERRAL!</span>
@@ -575,8 +618,8 @@
         </div>
       </div>
 
-      <div class="mt-12 text-center">
-        <a href="https://littleunicornpr.github.io/landingpage/contact.html" class="inline-block bg-blue-600 text-white px-8 py-4 text-lg rounded-full shadow hover:bg-blue-700 transition">
+      <div class="mt-8 md:mt-12 text-center">
+        <a href="https://littleunicornpr.github.io/landingpage/contact.html" class="inline-block bg-blue-600 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full shadow hover:bg-blue-700 transition">
           Contact Us to Register
         </a>
       </div>
@@ -584,17 +627,17 @@
   </section>
 
   <!-- WhatsApp Contact Section -->
-  <section class="bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 py-16 px-6">
+  <section class="bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 py-12 md:py-16 px-4 md:px-6">
     <div id="WA" class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-blue-800 mb-4">Interested in Our Programmes?</h2>
-      <a href="https://api.whatsapp.com/send?phone=6585080588&text=Hi%2C%20I'm%20interested%20in%20your%20programmes%20at%20Little%20Unicorn%20Preschool%20and%20would%20love%20to%20know%20more." class="inline-block bg-green-500 text-white px-8 py-3 rounded-full shadow hover:bg-green-600 transition">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-800 mb-3 md:mb-4">Interested in Our Programmes?</h2>
+      <a href="https://api.whatsapp.com/send?phone=6585080588&text=Hi%2C%20I'm%20interested%20in%20your%20programmes%20at%20Little%20Unicorn%20Preschool%20and%20would%20love%20to%20know%20more." class="inline-block bg-green-500 text-white px-6 md:px-8 py-3 rounded-full shadow hover:bg-green-600 transition">
         Chat with Us on WhatsApp
       </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-blue-200 py-6 text-center text-blue-800 text-sm">
+  <footer class="bg-blue-200 py-4 md:py-6 text-center text-blue-800 text-sm">
     &copy; 2025 Little Unicorn Preschool. All rights reserved.
   </footer>
 
