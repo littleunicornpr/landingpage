@@ -73,32 +73,61 @@
   .carousel-container {
     overflow-x: hidden;
   }
-    .carousel-wrapper {
-    overflow: hidden;
+     .slider-container {
+    position: relative;
     width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
   }
 
-  .carousel-track {
+  .slider-track {
     display: flex;
-    gap: 1.5rem;
-    animation: scroll-left 15s linear infinite;
-    width: max-content;
+    transition: transform 0.5s ease-in-out;
   }
 
-  .carousel-item {
-    flex-shrink: 0;
-    width: 320px; /* atau pakai w-80 jika pakai Tailwind */
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  .slide {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem;
+    border-radius: 9999px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+
+  .slider-btn.left {
+    left: 10px;
+  }
+
+  .slider-btn.right {
+    right: 10px;
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #93c5fd; /* blue-300 */
+    border-radius: 9999px;
+    transition: background-color 0.3s;
+  }
+
+  .dot.active {
+    background-color: #1e40af; /* blue-800 */
   }
   </style>
 </head>
@@ -454,21 +483,39 @@
   <div class="max-w-5xl mx-auto text-center">
     <h3 class="text-3xl font-bold text-blue-800 mb-6">Empowering Every Child to Learn, Explore, and Thrive.</h3>
 
-    <div class="carousel-wrapper">
-  <div class="carousel-track">
-    <!-- Isi carousel -->
-    <img src="https://littleunicornpr.github.io/landingpage/12.png" class="carousel-item" alt="Slide 1">
-    <img src="https://littleunicornpr.github.io/landingpage/13.png" class="carousel-item" alt="Slide 2">
-    <img src="https://littleunicornpr.github.io/landingpage/14.png" class="carousel-item" alt="Slide 3">
-    <img src="https://littleunicornpr.github.io/landingpage/15.png" class="carousel-item" alt="Slide 4">
-    <!-- Duplikat isi untuk loop halus -->
-    <img src="https://littleunicornpr.github.io/landingpage/12.png" class="carousel-item" alt="Slide 1 clone">
-    <img src="https://littleunicornpr.github.io/landingpage/13.png" class="carousel-item" alt="Slide 2 clone">
-    <img src="https://littleunicornpr.github.io/landingpage/14.png" class="carousel-item" alt="Slide 3 clone">
-    <img src="https://littleunicornpr.github.io/landingpage/15.png" class="carousel-item" alt="Slide 4 clone">
+    <div class="relative">
+  <!-- Tombol kiri -->
+  <button onclick="scrollSlider(-1)" class="slider-btn left-2">
+    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" stroke-width="2"
+      viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
+
+  <!-- Tombol kanan -->
+  <button onclick="scrollSlider(1)" class="slider-btn right-2">
+    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" stroke-width="2"
+      viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+
+  <!-- Slider isi -->
+  <div id="manualSlider" class="flex gap-4 overflow-x-auto scroll-smooth px-4 py-4">
+    <img src="https://littleunicornpr.github.io/landingpage/12.png" class="w-80 flex-shrink-0 rounded-lg shadow" />
+    <img src="https://littleunicornpr.github.io/landingpage/13.png" class="w-80 flex-shrink-0 rounded-lg shadow" />
+    <img src="https://littleunicornpr.github.io/landingpage/14.png" class="w-80 flex-shrink-0 rounded-lg shadow" />
+    <img src="https://littleunicornpr.github.io/landingpage/15.png" class="w-80 flex-shrink-0 rounded-lg shadow" />
   </div>
 </div>
 
+<script>
+  function scrollSlider(direction) {
+    const slider = document.getElementById('manualSlider');
+    const itemWidth = slider.querySelector('img').clientWidth + 16; // tambahkan gap
+    slider.scrollBy({ left: direction * itemWidth, behavior: 'smooth' });
+  }
+</script>
 <section class="bg-white py-16 px-6">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
     <div class="md:w-1/2">
