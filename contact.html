@@ -88,6 +88,12 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
+    .consultation-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
     /* WhatsApp floating button */
     .whatsapp-float {
       position: fixed;
@@ -190,13 +196,14 @@
 
       <!-- Form -->
       <form 
-        action="https://formsubmit.co/littleunicornpreschools@gmail.com" 
+        action="https://formsubmit.co/admin@littleunicornpreschool.com" 
         method="POST"
         class="space-y-6"
+        id="contactForm"
       >
         <!-- Hidden FormSubmit Configuration -->
         <input type="hidden" name="_subject" value="New School Tour Request from Website">
-        <input type="hidden" name="_cc" value="huangxiaoyan19890929@gmail.com,admin@littleunicornpreschool.com">
+        <input type="hidden" name="_cc" value="huangxiaoyan19890929@gmail.com,littleunicornpreschools@gmail.com">
         <input type="hidden" name="_next" value="https://littleunicornpr.github.io/landingpage/thankyou.html">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
@@ -305,7 +312,7 @@
 
         <!-- Submit Button -->
         <div class="text-center mt-8">
-          <button type="submit" class="consultation-btn">
+          <button type="submit" class="consultation-btn" id="submitBtn">
             FREE CONSULTATION
           </button>
         </div>
@@ -350,12 +357,18 @@
       birthdayInput.setAttribute('max', today);
 
       // Form submission feedback
-      const form = document.querySelector('form');
-      const submitBtn = document.querySelector('.consultation-btn');
+      const form = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
       
-      form.addEventListener('submit', function() {
+      form.addEventListener('submit', function(e) {
+        // Change button text and disable it
         submitBtn.innerHTML = 'SENDING...';
         submitBtn.disabled = true;
+        
+        // Optional: Add a loading spinner
+        submitBtn.style.opacity = '0.7';
+        
+        console.log('Form submitted! Redirecting to thankyou.html...');
       });
     });
 
