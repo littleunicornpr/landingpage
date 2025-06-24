@@ -3,72 +3,379 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Free Consultation Form</title>
+  <title>Sign Up for School Tour - Little Unicorn Preschool</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+    
+    * {
+      font-family: 'Nunito', sans-serif;
+    }
+
+    /* Custom gradient background to match the image */
+    .custom-gradient {
+      background: linear-gradient(180deg, #a3d977 0%, #f4d03f 100%);
+      min-height: 100vh;
+    }
+
+    /* Paper airplane animation */
+    .paper-airplane {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(2deg); }
+    }
+
+    /* Form styling to match the image */
+    .form-input {
+      background: rgba(255, 255, 255, 0.8);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 25px;
+      padding: 12px 20px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .form-input:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #f39c12;
+      box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2);
+    }
+
+    .form-textarea {
+      background: rgba(255, 255, 255, 0.8);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 15px;
+      padding: 15px 20px;
+      font-size: 16px;
+      resize: none;
+      transition: all 0.3s ease;
+    }
+
+    .form-textarea:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #f39c12;
+      box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2);
+    }
+
+    /* Button styling */
+    .consultation-btn {
+      background: linear-gradient(135deg, #e67e22, #d35400);
+      border-radius: 25px;
+      padding: 15px 40px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .consultation-btn:hover {
+      background: linear-gradient(135deg, #d35400, #c0392b);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Back button */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: #e67e22;
+    }
+
+    .back-btn:hover {
+      background: white;
+      transform: scale(1.1);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .form-container {
+        margin: 20px;
+        padding: 30px 20px;
+      }
+      
+      .main-title {
+        font-size: 3rem;
+      }
+      
+      .subtitle {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
-<body class="bg-yellow-300 min-h-screen flex items-center justify-center px-4">
+<body class="custom-gradient">
 
-  <form 
-    action="https://formsubmit.co/littleunicornpreschools@gmail.com" 
-    method="POST"
-    class="bg-white bg-opacity-50 p-6 md:p-10 rounded-xl max-w-3xl w-full"
-  >
-    <!-- Hidden config -->
-    <input type="hidden" name="_subject" value="New Consultation Request from Website">
-    <input type="hidden" name="_cc" value="huangxiaoyan19890929@gmail.com, admin@littleunicornpreschool.com">
-    <input type="hidden" name="_next" value="https://littleunicornpr.github.io/landingpage/thankyou.html">
-    <input type="hidden" name="_captcha" value="false">
+  <!-- Back Button -->
+  <a href="index.html" class="back-btn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
 
-    <div class="grid md:grid-cols-2 gap-6">
-      <div>
-        <label class="block text-gray-700 font-semibold mb-2">Parent's Particulars</label>
-        <input type="text" name="parent_name" required placeholder="Full Name"
-          class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none" />
-      </div>
-
-      <div>
-        <label class="block text-gray-700 font-semibold mb-2">Child's Particulars</label>
-        <input type="text" name="child_name" required placeholder="Full Name"
-          class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none" />
-      </div>
-
-      <div>
-        <label class="block text-gray-700 font-semibold mb-2">Contact</label>
-        <input type="text" name="contact" required placeholder="Phone Number"
-          class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none" />
-      </div>
-
-      <div>
-        <label class="block text-gray-700 font-semibold mb-2">Birthday</label>
-        <input type="date" name="birthday" required
-          class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none" />
-      </div>
-
-      <div>
-        <label class="block text-gray-700 font-semibold mb-2">Email</label>
-        <input type="email" name="email" required placeholder="Email"
-          class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none" />
-      </div>
-
-      <div>
-        <label class="block text-gray-700 font-semibold mb-2">Tour Date</label>
-        <input type="date" name="tour_date" required
-          class="w-full px-4 py-3 rounded-full bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none" />
-      </div>
+  <!-- Main Container -->
+  <div class="min-h-screen flex items-center justify-center px-4 py-8 relative overflow-hidden">
+    
+    <!-- Decorative Paper Airplane (Top Right) -->
+    <div class="absolute top-20 right-20 paper-airplane hidden lg:block">
+      <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 40L110 10L85 40L110 70L10 40Z" stroke="#e67e22" stroke-width="3" fill="none"/>
+        <path d="M10 40L50 35L85 40L50 45L10 40Z" fill="#f39c12" opacity="0.6"/>
+        <circle cx="95" cy="25" r="8" stroke="#e67e22" stroke-width="2" fill="none"/>
+      </svg>
     </div>
 
-    <div class="mt-6">
-      <textarea name="message" rows="5" placeholder="Leave us a message..."
-        class="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none"></textarea>
-    </div>
+    <!-- Form Container -->
+    <div class="form-container bg-white bg-opacity-20 backdrop-blur-sm rounded-3xl p-8 md:p-12 max-w-4xl w-full shadow-2xl">
+      
+      <!-- Header -->
+      <div class="text-center mb-8">
+        <h1 class="main-title text-5xl md:text-7xl font-black text-white mb-2 drop-shadow-lg">
+          SIGN UP
+        </h1>
+        <p class="subtitle text-xl md:text-2xl text-orange-600 font-bold mb-6">
+          for School Tour
+        </p>
+        <p class="text-white text-lg md:text-xl font-medium">
+          Please take a moment to fill out the form:
+        </p>
+      </div>
 
-    <div class="mt-6 text-center">
-      <button type="submit"
-        class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
-        FREE CONSULTATION
-      </button>
+      <!-- Form -->
+      <form 
+        action="https://formsubmit.co/littleunicornpreschools@gmail.com" 
+        method="POST"
+        class="space-y-6"
+      >
+        <!-- Hidden FormSubmit Configuration -->
+        <input type="hidden" name="_subject" value="New School Tour Request from Website">
+        <input type="hidden" name="_cc" value="huangxiaoyan19890929@gmail.com,admin@littleunicornpreschool.com">
+        <input type="hidden" name="_next" value="https://littleunicornpr.github.io/landingpage/thankyou.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <!-- Two Column Layout -->
+        <div class="grid md:grid-cols-2 gap-6">
+          
+          <!-- Left Column -->
+          <div class="space-y-6">
+            <!-- Parent's Particulars -->
+            <div>
+              <label class="block text-orange-600 font-bold text-lg mb-3">
+                Parent's Particulars
+              </label>
+              <input 
+                type="text" 
+                name="parent_name" 
+                required 
+                placeholder="Full Name"
+                class="form-input w-full"
+              />
+            </div>
+
+            <!-- Contact -->
+            <div>
+              <label class="block text-orange-600 font-bold text-lg mb-3">
+                Contact
+              </label>
+              <input 
+                type="tel" 
+                name="contact" 
+                required 
+                placeholder="Phone Number"
+                class="form-input w-full"
+              />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="block text-orange-600 font-bold text-lg mb-3">
+                Email
+              </label>
+              <input 
+                type="email" 
+                name="email" 
+                required 
+                placeholder="Email Address"
+                class="form-input w-full"
+              />
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="space-y-6">
+            <!-- Child's Particulars -->
+            <div>
+              <label class="block text-orange-600 font-bold text-lg mb-3">
+                Child's Particulars
+              </label>
+              <input 
+                type="text" 
+                name="child_name" 
+                required 
+                placeholder="Full Name"
+                class="form-input w-full"
+              />
+            </div>
+
+            <!-- Birthday -->
+            <div>
+              <label class="block text-orange-600 font-bold text-lg mb-3">
+                Birthday
+              </label>
+              <input 
+                type="date" 
+                name="birthday" 
+                required
+                class="form-input w-full"
+              />
+            </div>
+
+            <!-- Tour Date -->
+            <div>
+              <label class="block text-orange-600 font-bold text-lg mb-3">
+                Tour Date
+              </label>
+              <input 
+                type="date" 
+                name="tour_date" 
+                required
+                class="form-input w-full"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Message Textarea -->
+        <div class="mt-8">
+          <textarea 
+            name="message" 
+            rows="5" 
+            placeholder="Leave us a message..."
+            class="form-textarea w-full"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center mt-8">
+          <button type="submit" class="consultation-btn">
+            FREE CONSULTATION
+          </button>
+        </div>
+      </form>
     </div>
-  </form>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://api.whatsapp.com/send?phone=6585080588&text=Hi%2C%20I'm%20interested%20in%20scheduling%20a%20school%20tour%20at%20Little%20Unicorn%20Preschool." 
+     class="whatsapp-float" 
+     target="_blank"
+     title="Need Help? Chat with us on WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+    </svg>
+  </a>
+
+  <!-- JavaScript for form enhancements -->
+  <script>
+    // Add some interactive effects
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add focus effects to form inputs
+      const inputs = document.querySelectorAll('.form-input, .form-textarea');
+      
+      inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+          this.style.transform = 'scale(1.02)';
+        });
+        
+        input.addEventListener('blur', function() {
+          this.style.transform = 'scale(1)';
+        });
+      });
+
+      // Set minimum date for tour date (today)
+      const tourDateInput = document.querySelector('input[name="tour_date"]');
+      const today = new Date().toISOString().split('T')[0];
+      tourDateInput.setAttribute('min', today);
+
+      // Set maximum date for birthday (today)
+      const birthdayInput = document.querySelector('input[name="birthday"]');
+      birthdayInput.setAttribute('max', today);
+
+      // Form submission feedback
+      const form = document.querySelector('form');
+      const submitBtn = document.querySelector('.consultation-btn');
+      
+      form.addEventListener('submit', function() {
+        submitBtn.innerHTML = 'SENDING...';
+        submitBtn.disabled = true;
+      });
+    });
+
+    // Add some floating animation to decorative elements
+    function addFloatingAnimation() {
+      const airplane = document.querySelector('.paper-airplane');
+      
+      if (airplane) {
+        setInterval(() => {
+          airplane.style.transform += ' translateX(2px)';
+          setTimeout(() => {
+            airplane.style.transform = airplane.style.transform.replace('translateX(2px)', '');
+          }, 1000);
+        }, 3000);
+      }
+    }
+
+    // Initialize animations
+    addFloatingAnimation();
+  </script>
 
 </body>
 </html>
