@@ -815,7 +815,6 @@
       const countdownSection = document.getElementById('countdownSection');
       const countdownLabel = document.getElementById('countdownLabel');
       const urgencyText = document.getElementById('urgencyText');
-      const timezoneInfo = document.getElementById('timezoneInfo');
 
       // Clear any existing interval
       if (countdownInterval) {
@@ -889,23 +888,18 @@
             countdownSection.classList.add('countdown-midnight-reset');
             countdownLabel.textContent = '🎉 NEW DAY, NEW OFFER! 🎉';
             urgencyText.textContent = 'Fresh 24-hour countdown starts now!';
-            timezoneInfo.textContent = 'Just reset at midnight GMT+8!';
           } else {
             // Set urgency styling and messages based on remaining time
             if (timeRemaining <= 3600000) { // Less than 1 hour
-              urgencyText.textContent = 'LAST CHANCE! RESETS AT MIDNIGHT!';
+              urgencyText.textContent = 'LAST CHANCE! OFFER ENDING SOON!';
               countdownSection.classList.add('countdown-urgent');
-              timezoneInfo.textContent = `Only ${hours}h ${minutes}m left! Resets at 00:00 GMT+8`;
             } else if (timeRemaining <= 7200000) { // Less than 2 hours
-              urgencyText.textContent = 'ALMOST MIDNIGHT! HURRY!';
+              urgencyText.textContent = 'ALMOST OVER! HURRY!';
               countdownSection.classList.add('countdown-urgent');
-              timezoneInfo.textContent = 'Less than 2 hours left! Resets at midnight GMT+8';
             } else if (timeRemaining <= 10800000) { // Less than 3 hours
               urgencyText.textContent = 'HURRY! TIME RUNNING OUT!';
-              timezoneInfo.textContent = 'Offer resets daily at 00:00 GMT+8';
             } else {
               urgencyText.textContent = 'HURRY!';
-              timezoneInfo.textContent = 'Resets daily at midnight (GMT+8)';
             }
 
             countdownLabel.textContent = 'OFFER ENDS IN:';
