@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Unicorn Preschool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'unicorn-purple': '#6D28D9',
+                        'unicorn-light': '#F5F3FF',
+                        'unicorn-dark': '#4C1D95',
+                        'unicorn-pink': '#EC4899',
+                        'unicorn-blue': '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+        }
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, #8B5CF6 0%, #EC4899 50%, #3B82F6 100%);
+        }
+        .feature-icon {
+            color: #6D28D9;
+            background-color: #EDE9FE;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    
+    <script>
+        // Custom colors to match your design
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'unicorn-light': '#FEFDF0', // Light cream background
+                        'unicorn-purple': '#5D4A8C',
+                        'unicorn-dark': '#412F6B',
+                        'unicorn-pink': '#FF69B4',
+                        'unicorn-dark': '#2c3e50',
+                        'unicorn-purple': '#9370DB',
+                         // WARNA BARU: Untuk border ungu muda saat tidak di-hover
+                        'light-border-purple': '#E0D9F5', 
+                        // WARNA LATAR: Disesuaikan dengan deskripsi 'biru' dari gambar
+                        'light-blue-bg': '#F3F4FB', 
+                        'icon-gold': '#FBBF24',   // Emas/Kuning untuk piala
+                        'icon-blue': '#3B82F6',   // Biru untuk orang
+                        'icon-green': '#14B8A6',  // Hijau/Teal untuk perisai
+                     
+                        // WARNA BARU: Warna ungu muda khusus untuk ikon centang di list
+                        'checklist-icon': '#DCD7FE',
+                        'light-pink-bg': '#FFF9FA',
+                        // Warna-warna untuk ikon, judul, dan border
+                        'taekwondo-red': '#EF4444',
+                        'zumba-pink': '#EC4899',
+                        'baking-orange': '#F97316',
+                        'science-blue': '#3B82F6',
+                        'music-purple': '#8B5CF6',
+                        'creative-yellow': '#EAB308',
+                           // Latar belakang lavender muda
+                        'light-lavender-bg': '#F5F3FF',
+                        // Warna-warna untuk kartu Knowledge Objectives
+                        'aesthetics-purple': '#A78BFA',
+                        'discovery-green': '#34D399',
+                        'literacy-blue': '#60A5FA',
+                        'motor-orange': '#FBBF24',
+                        'numeracy-dark-purple': '#8B5CF6',
+                        'social-pink': '#F472B6',
+                        
+                         // Warna untuk kartu 21st Century Skills
+                        'collaboration-bg': '#EBF5FF',
+                        'collaboration-icon': '#3B82F6',
+                        'thinking-bg': '#F3E8FF',
+                        'thinking-icon': '#9333EA',
+                        'creativity-bg': '#FFF1F2',
+                        'creativity-icon': '#E11D48',
+                        'care-bg': '#ECFDF5',
+                        'care-icon': '#10B981',
+                        'coordination-bg': '#FFFBEB',
+                        'coordination-icon': '#F59E0B',
+                        'communication-bg': '#ECFEFF',
+                        'communication-icon': '#06B6D4',
+                        'summary-card-bg': '#EDF2FF',
+                         // Latar belakang lavender muda
+                        'facilities-bg': '#F8F7FF',
+                        // Latar belakang
+                        'pricing-bg': '#FCFCF9',
+                        // Warna untuk kartu Infant Care
+                        'infant-header-bg': '#E0E7FF',
+                        'infant-header-text': '#4338CA',
+                        'infant-total-text': '#4F46E5',
+                        'infant-button': '#EF4444',
+                        // Warna untuk kartu Childcare
+                        'childcare-header-bg': '#D1FAE5',
+                        'childcare-header-text': '#047857',
+                        'childcare-total-text': '#059669',
+                        'childcare-button': '#10B981',
+                        // Warna untuk Referral Box
+                        'referral-bg': '#FEF9C3',
+                        'referral-border': '#FDE68A',
+                        'referral-button': '#F97316',
+                        // Latar belakang
+                        'testimonial-bg': '#F9F5FF',
+                        'faq-bg': '#F0FFF4', // A very light green
+                        'faq-question-text': '#6B21A8',
+                        
+                        'footer-bg': '#2A2D3E', // Warna background footer yang gelap
+                        'footer-text': '#A9B3C6', // Warna teks abu-abu muda
+                        'footer-text-light': '#FFFFFF', // Warna teks putih
+                
+                    }
+                }
+            }
+        }
+    </script>
+    
+     
+</head>
+<body class="bg-white">
+
+    <nav class="bg-unicorn-light py-3 px-6 shadow-md sticky top-0 z-40">
+        <div class="container mx-auto flex justify-between items-center">
+            
+            <a href="#">
+                <img src="/foto/little-unicorn-preschool-logo.png" alt="Little Unicorn Preschool Logo" class="h-14">
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-unicorn-purple font-medium">About Us</a>
+                <a href="#programs" class="text-gray-700 hover:text-unicorn-purple font-medium">Programs</a>
+                <a href="#facilities" class="text-gray-700 hover:text-unicorn-purple font-medium">Facilities</a>
+                <a href="#pricing" class="text-gray-700 hover:text-unicorn-purple font-medium">Pricing</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-unicorn-purple font-medium">Testimonials</a>
+                <a href="#faq" class="text-gray-700 hover:text-unicorn-purple font-medium">FAQ</a>
+                <a href="#contact" class="text-gray-700 hover:text-unicorn-purple font-medium">Contact Us</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="#testimonials" class="text-white font-bold py-3 px-6 rounded-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 transition duration-300">
+                    Register Now!
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button class="text-unicorn-purple text-3xl" id="mobileMenuButton">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="hidden fixed inset-0 bg-unicorn-light z-50 p-6" id="mobileMenu">
+        <div class="flex justify-between items-center">
+            <a href="#">
+                <img src="http://googleusercontent.com/file_content/1" alt="Little Unicorn Preschool Logo" class="h-14">
+            </a>
+            <button class="text-unicorn-purple text-4xl" id="mobileMenuCloseButton">
+                &times;
+            </button>
+        </div>
+
+        <div class="flex flex-col items-center justify-center h-full space-y-8 -mt-16">
+            <a href="#about" class="text-gray-700 hover:text-unicorn-purple font-medium text-lg">About Us</a>
+            <a href="#programs" class="text-gray-700 hover:text-unicorn-purple font-medium text-lg">Programs</a>
+            <a href="#facilities" class="text-gray-700 hover:text-unicorn-purple font-medium text-lg">Facilities</a>
+            <a href="#pricing" class="text-gray-700 hover:text-unicorn-purple font-medium text-lg">Pricing</a>
+            <a href="#testimonials" class="text-gray-700 hover:text-unicorn-purple font-medium text-lg">Testimonials</a>
+            <a href="#faq" class="text-gray-700 hover:text-unicorn-purple font-medium text-lg">FAQ</a>
+            <a href="#contact" class="text-gray-700 hover:text-unicorn-purple font-medium text-lg">Contact Us</a>
+            <a href="#testimonials" class="mt-4 text-white font-bold py-3 px-8 rounded-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 transition duration-300">
+                Register Now!
+            </a>
+        </div>
+    </div>
+  
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenuCloseButton = document.getElementById('mobileMenuCloseButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+        const toggleMenu = () => {
+            mobileMenu.classList.toggle('hidden');
+        };
+
+        mobileMenuButton.addEventListener('click', toggleMenu);
+        mobileMenuCloseButton.addEventListener('click', toggleMenu);
+        
+        // Optional: Close menu when a link is clicked (for single-page apps)
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+    <!-- Hero Section -->
+   <section id="home"
+    class="relative bg-cover bg-center"
+    style="background-image: url('http://googleusercontent.com/file_content/0');">
+    <div class="absolute inset-0 bg-pink-900 bg-opacity-60"></div>
+
+    <div class="relative container mx-auto px-6 py-32 md:py-48 flex flex-col items-center justify-center text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+            Welcome to Little Unicorn Preschool
+        </h1>
+        <p class="text-lg md:text-xl text-white max-w-3xl mx-auto mb-8">
+            Nurturing young minds, fostering creativity, and building a strong foundation for lifelong learning in a magical environment.
+        </p>
+        <a href="#testimonials" class="text-white font-bold py-3 px-8 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition duration-300 shadow-lg">
+            Explore Our Programs
+            </a>
+        </div>
+    </section>
+    <!-- About Section -->
+   <section id="about" class="py-20 px-6 bg-light-blue-bg">
+    <div class="container mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-unicorn-dark mb-3">About Little Unicorn Preschool</h2>
+            <p class="text-lg text-gray-600">Where every child's potential becomes reality</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            
+            <div class="bg-white p-5 rounded-xl border-2 border-light-border-purple hover:border-unicorn-purple shadow-sm flex items-center space-x-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                <i class="fas fa-check-circle text-green-500 text-2xl"></i>
+                <span class="text-gray-700">Small class sizes (max 12 children)</span>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border-2 border-light-border-purple hover:border-unicorn-purple shadow-sm flex items-center space-x-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                <i class="fas fa-check-circle text-green-500 text-2xl"></i>
+                <span class="text-gray-700">Certified early childhood educators</span>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border-2 border-light-border-purple hover:border-unicorn-purple shadow-sm flex items-center space-x-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                <i class="fas fa-check-circle text-green-500 text-2xl"></i>
+                <span class="text-gray-700">Nutritious meals and snacks included</span>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border-2 border-light-border-purple hover:border-unicorn-purple shadow-sm flex items-center space-x-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                <i class="fas fa-check-circle text-green-500 text-2xl"></i>
+                <span class="text-gray-700">Daily outdoor play and activities</span>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border-2 border-light-border-purple hover:border-unicorn-purple shadow-sm flex items-center space-x-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                <i class="fas fa-check-circle text-green-500 text-2xl"></i>
+                <span class="text-gray-700">School readiness preparation</span>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border-2 border-light-border-purple hover:border-unicorn-purple shadow-sm flex items-center space-x-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                <i class="fas fa-check-circle text-green-500 text-2xl"></i>
+                <span class="text-gray-700">Art, music, and STEM programs</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!--Section WHY -->
+        <section id="why-choose-us" class="py-20 px-6 bg-light-blue-bg">
+    <div class="container mx-auto">
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="bg-white p-2 rounded-xl shadow-lg">
+                <img src="/foto/why-parents-choose-us.jpeg" alt="Happy family at Little Unicorn Preschool" class="w-full h-auto rounded-lg">
+            </div>
+
+            <div>
+                <h2 class="text-3xl font-bold text-unicorn-purple mb-8">Why Parents Choose Us</h2>
+                <ul class="space-y-6">
+                    
+                    <li class="flex items-start space-x-4">
+                        <div class="text-icon-gold text-xl pt-1">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 text-lg">Award-Winning Curriculum</h3>
+                            <p class="text-gray-500">Recognized by early childhood education experts</p>
+                        </div>
+                    </li>
+                    
+                    <li class="flex items-start space-x-4">
+                        <div class="text-icon-blue text-xl pt-1">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 text-lg">Low Student-Teacher Ratio</h3>
+                            <p class="text-gray-500">Maximum 6:1 ratio ensures personalized attention</p>
+                        </div>
+                    </li>
+                    
+                    <li class="flex items-start space-x-4">
+                        <div class="text-icon-green text-xl pt-1">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 text-lg">Safe & Secure Environment</h3>
+                            <p class="text-gray-500">State-of-the-art security and safety protocols</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-16">
+            <a href="#testimonials" class="inline-block text-white font-bold py-4 px-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition duration-300 shadow-lg transform hover:scale-105">
+                Discover Our Unique Approach
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section id="programs" class="py-20 px-6 bg-light-pink-bg">
+    <div class="container mx-auto">
+        <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold text-unicorn-dark mb-3">Our Comprehensive Programs</h2>
+            <p class="text-lg text-gray-500">Designed to foster holistic development and future-ready skills</p>
+        </div>
+
+        <div class="text-center mb-12">
+            <h3 class="text-2xl font-semibold text-gray-700">Care Programs</h3>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-yellow-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="foto/program-infant-care-v2.jpeg" alt="Infant Care" class="w-full h-56 object-cover">
+                <div class="bg-yellow-50 text-center p-6">
+                    <div class="text-4xl mb-3">👶</div>
+                    <h3 class="text-xl font-bold text-gray-800">Infant Care</h3>
+                    <p class="font-semibold text-yellow-700">3-18 Months</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Individualized feeding schedules</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Sensory exploration activities</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Tummy time and motor development</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Gentle music and movement</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Loving, nurturing environment</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-blue-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="foto/program-early-years-v3.jpeg" alt="Early Years Program" class="w-full h-56 object-cover">
+                <div class="bg-blue-50 text-center p-6">
+                    <div class="text-4xl mb-3">🧒</div>
+                    <h3 class="text-xl font-bold text-gray-800">Early Years</h3>
+                    <p class="font-semibold text-blue-600">18 Months-4 Years</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Language development activities</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Social skills building</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Creative arts and crafts</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Outdoor exploration</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Early literacy introduction</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-green-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="/foto/program-early-years-v2.jpeg" alt="Kindergarten Program" class="w-full h-56 object-cover">
+                <div class="bg-green-50 text-center p-6">
+                    <div class="text-4xl mb-3">🎓</div>
+                    <h3 class="text-xl font-bold text-gray-800">Kindergarten Years</h3>
+                    <p class="font-semibold text-green-700">5-6 Years</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>School readiness preparation</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Advanced literacy and numeracy</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Critical thinking development</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Leadership opportunities</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-checklist-icon mt-1 mr-3"></i><span>Primary school transition support</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== START: LEARNING ACTIVITIES SECTION ========== -->
+<section id="activities" class="py-20 px-6 bg-light-pink-bg">
+    <div class="container mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-unicorn-dark">Learning Activities</h2>
+        </div>
+
+        <!-- Activities Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Card 1: Taekwondo -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-taekwondo-red/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="foto/activity-taekwondo-new.jpeg" alt="Taekwondo Class" class="w-full h-56 object-cover">
+                <div class="p-6 text-center">
+                    <div class="text-taekwondo-red text-3xl mb-3">🥋</div>
+                    <h3 class="text-xl font-bold text-taekwondo-red mb-2">Taekwondo</h3>
+                    <p class="text-gray-600 text-sm">Build discipline, confidence, and physical fitness through martial arts training designed for young learners.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Zumba -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-zumba-pink/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="/foto/activity-zumba-new.jpeg" alt="Zumba Class" class="w-full h-56 object-cover">
+                <div class="p-6 text-center">
+                     <div class="text-zumba-pink text-3xl mb-3">💃</div>
+                    <h3 class="text-xl font-bold text-zumba-pink mb-2">Zumba</h3>
+                    <p class="text-gray-600 text-sm">Fun dance fitness program that improves coordination, rhythm, and cardiovascular health.</p>
+                </div>
+            </div>
+            
+            <!-- Card 3: Baking/Cookery -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-baking-orange/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="/foto/activity-cooking-new.jpeg" alt="Baking Class" class="w-full h-56 object-cover">
+                <div class="p-6 text-center">
+                    <div class="text-baking-orange text-3xl mb-3">🧑‍🍳</div>
+                    <h3 class="text-xl font-bold text-baking-orange mb-2">Baking/Cookery</h3>
+                    <p class="text-gray-600 text-sm">Hands-on cooking experiences that teach measurements, following instructions, and healthy eating habits.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Science Discovery -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-science-blue/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="/foto/activity-science-new.jpeg" alt="Science Discovery" class="w-full h-56 object-cover">
+                <div class="p-6 text-center">
+                    <div class="text-science-blue text-3xl mb-3">🔬</div>
+                    <h3 class="text-xl font-bold text-science-blue mb-2">Science Discovery</h3>
+                    <p class="text-gray-600 text-sm">Explore the wonders of science through safe, age-appropriate experiments and discovery activities.</p>
+                </div>
+            </div>
+
+            <!-- Card 5: Music & Movement -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-music-purple/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="/foto/activity-music-new.jpeg" alt="Music & Movement" class="w-full h-56 object-cover">
+                <div class="p-6 text-center">
+                    <div class="text-music-purple text-3xl mb-3">🎵</div>
+                    <h3 class="text-xl font-bold text-music-purple mb-2">Music & Movement</h3>
+                    <p class="text-gray-600 text-sm">Develop musical appreciation, rhythm, and gross motor skills through interactive music sessions.</p>
+                </div>
+            </div>
+
+            <!-- Card 6: Creative Expression -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-creative-yellow/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="/foto/activity-art-new.jpeg" alt="Creative Expression" class="w-full h-56 object-cover">
+                <div class="p-6 text-center">
+                    <div class="text-creative-yellow text-3xl mb-3">🎨</div>
+                    <h3 class="text-xl font-bold text-creative-yellow mb-2">Creative Expression</h3>
+                    <p class="text-gray-600 text-sm">Foster creativity and self-expression through various art forms, crafts, and aesthetic activities.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ========== END: LEARNING ACTIVITIES SECTION ========== -->
+
+<!-- ========== START: KNOWLEDGE OBJECTIVES SECTION ========== -->
+<section id="knowledge-objectives" class="py-20 px-6 bg-light-pink-bg">
+    <div class="container mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-unicorn-dark mb-3">Knowledge Objectives</h2>
+            <p class="text-lg text-gray-500 mb-6">Identified by the Ministry of Education (MOE)</p>
+            <a href="#" class="inline-block bg-purple-100 text-purple-700 font-semibold py-2 px-5 rounded-full text-sm">MOE Approved Curriculum</a>
+        </div>
+
+        <!-- Objectives Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Card 1: Aesthetics & Creative Expression -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-aesthetics-purple/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="/foto/objective-aesthetics-new-v2.jpeg" alt="Aesthetics & Creative Expression" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-palette text-aesthetics-purple text-xl mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-1">Aesthetics & Creative Expression</h3>
+                            <p class="text-gray-600 text-sm">Developing appreciation for beauty, creativity, and artistic expression through various art forms and creative activities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Discovery of the World -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-discovery-green/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="/foto/objective-discovery-new-v2.jpeg" alt="Discovery of the World" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-globe-asia text-discovery-green text-xl mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-1">Discovery of the World</h3>
+                            <p class="text-gray-600 text-sm">Exploring and understanding the natural and social environment through hands-on investigation and discovery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3: Language & Literacy -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-literacy-blue/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="/foto/objective-language-new.jpeg" alt="Language & Literacy" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-book-open text-literacy-blue text-xl mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-1">Language & Literacy</h3>
+                            <p class="text-gray-600 text-sm">Building strong foundation in communication, reading, writing, and language comprehension skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Motor Skills Development -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-motor-orange/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="/foto/objective-motor-skills-new.jpeg" alt="Motor Skills Development" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-running text-motor-orange text-xl mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-1">Motor Skills Development</h3>
+                            <p class="text-gray-600 text-sm">Enhancing both fine and gross motor skills through physical activities, sports, and hands-on learning experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Numeracy -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-numeracy-dark-purple/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="/foto/objective-numeracy-new.jpeg" alt="Numeracy" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-calculator text-numeracy-dark-purple text-xl mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-1">Numeracy</h3>
+                            <p class="text-gray-600 text-sm">Developing mathematical thinking, problem-solving skills, and understanding of numbers and patterns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Social & Emotional Development -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-social-pink/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <img src="/foto/objective-social-emotional-new-v2.jpeg" alt="Social & Emotional Development" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-heart text-social-pink text-xl mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-1">Social & Emotional Development</h3>
+                            <p class="text-gray-600 text-sm">Nurturing emotional intelligence, empathy, social skills, and positive relationships with peers and adults.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ========== END: KNOWLEDGE OBJECTIVES SECTION ========== -->
+
+<!-- ========== START: 21ST CENTURY SKILLS SECTION ========== -->
+<section id="skills" class="py-20 px-6 bg-light-pink-bg">
+    <div class="container mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-unicorn-dark mb-3">21st Century Skills</h2>
+            <p class="text-lg text-gray-500 mb-6">Focus On The 6 C's</p>
+            <a href="#" class="inline-block bg-purple-100 text-purple-700 font-semibold py-2 px-5 rounded-full text-sm border border-purple-200">Future-Ready Learning</a>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Card 1: Collaboration -->
+            <div class="p-8 rounded-2xl bg-collaboration-bg border-2 border-collaboration-icon/10">
+                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-white mb-5 shadow-sm">
+                    <i class="fas fa-users text-collaboration-icon text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-xl text-gray-800 mb-2">Collaboration</h3>
+                <p class="text-gray-600">Working effectively with others, sharing ideas, and contributing to group success through teamwork and cooperation.</p>
+            </div>
+
+            <!-- Card 2: Critical Thinking -->
+            <div class="p-8 rounded-2xl bg-thinking-bg border-2 border-thinking-icon/10">
+                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-white mb-5 shadow-sm">
+                    <i class="fas fa-brain text-thinking-icon text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-xl text-gray-800 mb-2">Critical Thinking</h3>
+                <p class="text-gray-600">Analyzing information, solving problems, making reasoned decisions, and thinking logically about complex situations.</p>
+            </div>
+            
+            <!-- Card 3: Creativity -->
+            <div class="p-8 rounded-2xl bg-creativity-bg border-2 border-creativity-icon/10">
+                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-white mb-5 shadow-sm">
+                    <i class="fas fa-lightbulb text-creativity-icon text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-xl text-gray-800 mb-2">Creativity</h3>
+                <p class="text-gray-600">Generating original ideas, thinking outside the box, and approaching challenges with innovative solutions.</p>
+            </div>
+
+            <!-- Card 4: Care -->
+            <div class="p-8 rounded-2xl bg-care-bg border-2 border-care-icon/10">
+                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-white mb-5 shadow-sm">
+                    <i class="fas fa-heart text-care-icon text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-xl text-gray-800 mb-2">Care</h3>
+                <p class="text-gray-600">Showing empathy, compassion, and concern for others, the environment, and the community around us.</p>
+            </div>
+
+            <!-- Card 5: Co-ordination -->
+            <div class="p-8 rounded-2xl bg-coordination-bg border-2 border-coordination-icon/10">
+                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-white mb-5 shadow-sm">
+                    <i class="fas fa-tasks text-coordination-icon text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-xl text-gray-800 mb-2">Co-ordination</h3>
+                <p class="text-gray-600">Organizing activities, managing time effectively, and bringing together different elements to achieve common goals.</p>
+            </div>
+
+            <!-- Card 6: Communication -->
+            <div class="p-8 rounded-2xl bg-communication-bg border-2 border-communication-icon/10">
+                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-white mb-5 shadow-sm">
+                    <i class="fas fa-comments text-communication-icon text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-xl text-gray-800 mb-2">Communication</h3>
+                <p class="text-gray-600">Expressing ideas clearly, listening actively, and engaging in meaningful dialogue with diverse audiences.</p>
+            </div>
+        </div>
+
+        <!-- Summary Card -->
+        <div class="mt-16 bg-summary-card-bg p-8 md:p-12 rounded-2xl text-center">
+            <h3 class="text-2xl md:text-3xl font-bold text-unicorn-dark mb-4">Preparing Your Child for Tomorrow</h3>
+            <p class="text-gray-700 mb-8 max-w-3xl mx-auto">
+                Our comprehensive approach to the 6 C's ensures your child develops the essential skills needed to thrive in an ever-changing world. Through integrated learning experiences, we nurture confident, capable, and caring individuals ready for future success.
+            </p>
+            <a href="#testimonials" class="inline-block text-white font-bold py-4 px-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition duration-300 shadow-lg transform hover:scale-105">
+                Explore Our Curriculum
+            </a>
+        </div>
+    </div>
+</section>
+<!-- ========== END: 21ST CENTURY SKILLS SECTION ========== -->
+
+<!-- ========== START: OUR AMAZING FACILITIES SECTION ========== -->
+<section id="facilities" class="py-20 px-6 bg-facilities-bg">
+    <div class="container mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-unicorn-dark mb-3">Our Amazing Facilities</h2>
+            <p class="text-lg text-gray-500">Explore our state-of-the-art learning environments</p>
+        </div>
+
+        <!-- Facilities Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Facility Card 1: Interactive Classrooms -->
+            <div class="bg-white p-3 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <img src="/foto/facility-classroom-new.jpeg" alt="Interactive Classrooms" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="font-semibold text-gray-800 mt-4 text-center">Interactive Classrooms</h3>
+            </div>
+
+            <!-- Facility Card 2: Safe Playground -->
+            <div class="bg-white p-3 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <img src="/foto/facility-playground-new.jpeg" alt="Safe Playground" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="font-semibold text-gray-800 mt-4 text-center">Safe Playground</h3>
+            </div>
+            
+            <!-- Facility Card 3: Reading Corner -->
+            <div class="bg-white p-3 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <img src="/foto/facility-reading-corner-new.jpeg" alt="Reading Corner" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="font-semibold text-gray-800 mt-4 text-center">Reading Corner</h3>
+            </div>
+
+            <!-- Facility Card 4: Teaching Kitchen -->
+            <div class="bg-white p-3 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <img src="/foto/facility-kitchen-new.jpeg" alt="Teaching Kitchen" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="font-semibold text-gray-800 mt-4 text-center">Teaching Kitchen</h3>
+            </div>
+
+            <!-- Facility Card 5: Children's Washroom -->
+            <div class="bg-white p-3 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <img src="/foto/facility-children-washroom.jpeg" alt="Children's Washroom" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="font-semibold text-gray-800 mt-4 text-center">Children's Washroom</h3>
+            </div>
+
+            <!-- Facility Card 6: Children's Toilets -->
+            <div class="bg-white p-3 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <img src="/foto/facility-toilet.jpeg" alt="Children's Toilets" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="font-semibold text-gray-800 mt-4 text-center">Children's Toilets</h3>
+            </div>
+
+            <!-- Facility Card 7: Multi-purpose Hall -->
+            <div class="bg-white p-3 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <img src="/foto/facility-multi-purpose-hall.jpeg" alt="Multi-purpose Hall" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="font-semibold text-gray-800 mt-4 text-center">Multi-purpose Hall</h3>
+            </div>
+
+            <!-- Facility Card 8: Infant Nap Room -->
+            <div class="bg-white p-3 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <img src="/foto/facility-nap-room-new.jpeg" alt="Infant Nap Room" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="font-semibold text-gray-800 mt-4 text-center">Infant Nap Room</h3>
+            </div>
+        </div>
+
+        <!-- Call to Action Button -->
+        <div class="text-center mt-16">
+            <a href="#testimonials" class="inline-block text-white font-bold py-4 px-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition duration-300 shadow-lg transform hover:scale-105">
+                Schedule a Tour Today!
+            </a>
+        </div>
+    </div>
+</section>
+<!-- ========== END: OUR AMAZING FACILITIES SECTION ========== -->
+
+<!-- ========== START: PRICING SECTION ========== -->
+<section id="pricing" class="py-20 px-6 bg-unicorn-light">
+    <div class="container mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-unicorn-dark mb-3">Our Program Pricing</h2>
+            <p class="text-lg text-gray-500">Transparent pricing with government subsidies and school discounts</p>
+        </div>
+
+        <!-- Pricing Grid -->
+        <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            
+            <!-- Pricing Card 1: Infant Care -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-blue-200">
+                <div class="bg-infant-header-bg text-infant-header-text font-bold text-center py-3 rounded-lg mb-6">
+                    Infant Care (0 to 18 months)
+                </div>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span>Full Fee:</span>
+                        <span class="text-gray-400 line-through">$2,200</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span>Basic Working Mum Subsidy:</span>
+                        <span class="font-semibold">$600</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span>Discount from School:</span>
+                        <span class="font-semibold">$200</span>
+                    </div>
+                    <div class="flex justify-between items-center pt-3">
+                        <span class="font-bold">Total Payable:</span>
+                        <span class="font-bold text-xl text-infant-total-text">$1,400/month</span>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <a href="#testimonials" class="block w-full text-center text-white font-bold py-3 px-6 rounded-lg bg-infant-button hover:bg-red-600 transition duration-300">
+                        Enroll Now!
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pricing Card 2: Childcare -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-green-200">
+                <div class="bg-childcare-header-bg text-childcare-header-text font-bold text-center py-3 rounded-lg mb-6">
+                    Childcare (18 months to 6 years)
+                </div>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span>Actual Fee:</span>
+                        <span class="font-semibold">$1,688</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span>Basic Working Mum Subsidy:</span>
+                        <span class="font-semibold">$300</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span>Discount from School:</span>
+                        <span class="font-semibold">$200</span>
+                    </div>
+                    <div class="flex justify-between items-center pt-3">
+                        <span class="font-bold">Total Payable:</span>
+                        <span class="font-bold text-xl text-childcare-total-text">$1,188/month</span>
+                    </div>
+                </div>
+                 <div class="mt-8">
+                    <a href="#testimonials" class="block w-full text-center text-white font-bold py-3 px-6 rounded-lg bg-childcare-button hover:bg-green-600 transition duration-300">
+                        Enroll Now!
+                    </a>
+                </div>
+                <!-- Special Referral Rate Box -->
+                <div class="mt-6 bg-referral-bg border border-referral-border p-4 rounded-lg">
+                    <h4 class="font-bold text-center text-yellow-800 mb-3">Special Referral Rate:</h4>
+                    <div class="flex justify-between items-center text-sm mb-3">
+                        <span>Original Fee:</span>
+                        <span class="text-gray-500 line-through">$1,688</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-bold text-yellow-900">With Referral Discount:</span>
+                        <span class="font-bold text-xl text-green-600">$888/month</span>
+                    </div>
+                    <a href="#testimonials" class="block w-full text-center text-white font-bold py-2 px-4 rounded-md bg-referral-button hover:bg-orange-600 transition duration-300 mb-2">
+                        Learn More About Referrals!
+                    </a>
+                    <p class="text-xs text-gray-600 text-center">Includes $300 subsidy + $500 school discount. Valid until K2 for both children.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final CTA Button -->
+        <div class="text-center mt-16">
+            <a href="#" class="inline-block text-white font-bold py-4 px-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition duration-300 shadow-lg transform hover:scale-105">
+                View Enrollment Options
+            </a>
+        </div>
+         <p class="text-center text-sm text-gray-500 mt-6">* Government subsidies are subject to eligibility criteria. School discounts apply to enrolled families.</p>
+    </div>
+</section>
+<!-- ========== END: PRICING SECTION ========== -->
+
+ <!-- ========== START: TESTIMONIALS SECTION ========== -->
+<section id="testimonials" class="py-20 px-6 bg-testimonial-bg">
+    <div class="container mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-unicorn-dark mb-4">What Parents Are Saying</h2>
+            <div class="flex justify-center items-center">
+                <div class="flex text-yellow-400 text-2xl">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="ml-3 text-gray-700 font-bold">4.9/5 Rating</span>
+            </div>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
+            <!-- Testimonial Card 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="flex text-yellow-400 mb-4">
+                    <i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i>
+                </div>
+                <p class="text-gray-600 italic mb-4">"My daughter absolutely loves Little Unicorn! The teachers are amazing and she's learned so much."</p>
+                <p class="font-bold text-purple-600">- Aisha Rahman</p>
+            </div>
+            <!-- Testimonial Card 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="flex text-yellow-400 mb-4">
+                    <i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i>
+                </div>
+                <p class="text-gray-600 italic mb-4">"Best decision we made for our son's early education. The curriculum is fantastic!"</p>
+                <p class="font-bold text-purple-600">- Priya Sharma</p>
+            </div>
+            <!-- Testimonial Card 3 -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="flex text-yellow-400 mb-4">
+                    <i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i>
+                </div>
+                <p class="text-gray-600 italic mb-4">"The staff treats every child like family. We couldn't be happier with our choice."</p>
+                <p class="font-bold text-purple-600">- Lim Wei Ling</p>
+            </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="text-center space-y-4 md:space-y-0 md:space-x-4">
+            <a href="#" class="inline-block text-white font-bold py-4 px-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition duration-300 shadow-lg transform hover:scale-105">
+                Apply for Enrollment Today!
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=6585080588&text&type=phone_number&app_absent=0" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                <i class="fab fa-whatsapp mr-2"></i> Chat with us on WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+<!-- ========== END: TESTIMONIALS SECTION ========== -->
+
+<!-- ========== START: FAQ SECTION ========== -->
+<section id="faq" class="py-20 px-6 bg-faq-bg">
+    <div class="container mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-unicorn-dark mb-3">Frequently Asked Questions</h2>
+        </div>
+
+        <!-- Accordion Container -->
+        <div class="max-w-3xl mx-auto space-y-4" id="faq-accordion">
+            
+            <!-- FAQ Item 1 -->
+            <div class="faq-item bg-white border border-purple-100 rounded-lg shadow-sm">
+                <button class="w-full flex justify-between items-center p-5 text-left font-semibold text-faq-question-text focus:outline-none">
+                    <span>Are there any current enrollment discounts?</span>
+                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content px-5 text-gray-600 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <p class="pb-5">We occasionally offer special enrollment discounts. Please check our pricing section or contact us directly for information on any current promotions.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item bg-white border border-purple-100 rounded-lg shadow-sm">
+                <button class="w-full flex justify-between items-center p-5 text-left font-semibold text-faq-question-text focus:outline-none">
+                    <span>When can my child start the program?</span>
+                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content px-5 text-gray-600 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <p class="pb-5">We offer rolling enrollment throughout the year, subject to availability. Once your registration is complete, we will work with you to determine the best start date for your child.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item bg-white border border-purple-100 rounded-lg shadow-sm">
+                <button class="w-full flex justify-between items-center p-5 text-left font-semibold text-faq-question-text focus:outline-none">
+                    <span>What age groups do you accept?</span>
+                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content px-5 text-gray-600 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <p class="pb-5">We accept children ages 3 months to 6 years old, with age-appropriate classrooms and activities for each developmental stage. Please see our 'Care Programs' section for more details.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item bg-white border border-purple-100 rounded-lg shadow-sm">
+                <button class="w-full flex justify-between items-center p-5 text-left font-semibold text-faq-question-text focus:outline-none">
+                    <span>Can I schedule a tour of the facilities?</span>
+                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content px-5 text-gray-600 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <p class="pb-5">We encourage prospective families to visit our preschool. Please contact us via phone or email to schedule a personalized tour at your convenience.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Final CTA Button -->
+        <div class="text-center mt-16">
+            <a href="#testimonials" class="inline-block text-white font-bold py-4 px-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition duration-300 shadow-lg transform hover:scale-105">
+                Apply for Enrollment Today!
+            </a>
+        </div>
+    </div>
+</section>
+<!-- ========== END: FAQ SECTION ========== -->
+
+<!-- SCRIPT TELAH DIPERBARUI -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const accordionItems = document.querySelectorAll('.faq-item');
+
+        accordionItems.forEach(item => {
+            const button = item.querySelector('button');
+            const content = item.querySelector('.faq-content');
+            const icon = button.querySelector('i');
+
+            button.addEventListener('click', () => {
+                // Cek apakah item yang diklik saat ini sudah terbuka
+                const isCurrentlyOpen = item.classList.contains('active');
+
+                // Tutup semua item terlebih dahulu
+                accordionItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-content').style.maxHeight = '0px';
+                    otherItem.querySelector('button i').classList.remove('rotate-180');
+                });
+
+                // Jika item yang diklik sebelumnya tidak terbuka, maka buka sekarang
+                if (!isCurrentlyOpen) {
+                    item.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+
+        // Opsional: Buka item terakhir secara default sesuai gambar
+        const lastItem = accordionItems[accordionItems.length - 1];
+        if (lastItem) {
+            lastItem.querySelector('button').click();
+        }
+    });
+</script>
+
+<!-- ========== START: FOOTER SECTION ========== -->
+<footer id="contact" class="bg-footer-bg text-footer-text pt-16 pb-8 px-6">
+    <div class="container mx-auto text-center">
+        
+        <!-- Logo Gambar -->
+        <img src="/foto/unicorn-emoji.png" alt="Little Unicorn Preschool Logo" class="h-24 w-24 mx-auto mb-4 rounded-full">
+        
+        <!-- School Name & Tagline -->
+        <h2 class="text-2xl font-bold text-footer-text-light mb-2">Little Unicorn Preschool</h2>
+        <p class="mb-10">Where every child's potential becomes reality</p>
+
+        <!-- Contact Info Grid -->
+        <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-10">
+            <!-- Address -->
+            <div class="flex items-center justify-center md:justify-start">
+                <i class="fas fa-map-marker-alt text-xl mr-3"></i>
+                <span>339 Anchorvale Rd, #03-01, Singapore 540399</span>
+            </div>
+            <!-- Phone -->
+            <div class="flex items-center justify-center">
+                <i class="fas fa-phone-alt text-xl mr-3"></i>
+                <a href="tel:+6585080588" class="hover:text-white">+65 8508 0588</a>
+            </div>
+            <!-- Email -->
+            <div class="flex items-center justify-center md:justify-end">
+                <i class="fas fa-envelope text-xl mr-3"></i>
+                <a href="mailto:admin@littleunicornpreschool.com" class="hover:text-white">admin@littleunicornpreschool.com</a>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-gray-700 max-w-5xl mx-auto mb-8"></div>
+
+        <!-- Copyright -->
+        <p class="text-sm">&copy; 2025 Little Unicorn Preschool. All rights reserved.</p>
+    </div>
+</footer>
+<!-- ========== END: FOOTER SECTION ========== -->
+
+   
+</body>
+</html>
